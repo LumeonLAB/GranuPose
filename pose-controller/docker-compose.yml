@@ -1,0 +1,76 @@
+﻿services:
+  bridge:
+    profiles: ["prod"]
+    build:
+      context: .
+      dockerfile: Dockerfile.bridge
+    container_name: granupose-bridge
+    environment:
+      BRIDGE_HOST: 0.0.0.0
+      BRIDGE_PORT: 8787
+      OSC_TARGET_HOST: ${OSC_TARGET_HOST:-host.docker.internal}
+      OSC_TARGET_PORT: ${OSC_TARGET_PORT:-16447}
+      OSC_CHANNEL_PREFIX: ${OSC_CHANNEL_PREFIX:-/pose/out}
+      CHANNEL_COUNT: ${CHANNEL_COUNT:-16}
+      MAX_MESSAGES_PER_SECOND: ${MAX_MESSAGES_PER_SECOND:-60}
+      ALLOWED_ORIGIN: ${ALLOWED_ORIGIN:-*}
+    ports:
+      - "${BRIDGE_PORT:-8787}:8787"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8787/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  frontend:
+    profiles: ["prod"]
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: granupose-frontend
+    ports:
+      - "${WEB_PORT:-8080}:8080"
+    depends_on:
+      bridge:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  bridge-dev:
+    profiles: ["dev"]
+    image: node:22-alpine
+    working_dir: /workspace
+    command: sh -c "npm ci && node bridge/server.cjs"
+    environment:
+      BRIDGE_HOST: 0.0.0.0
+      BRIDGE_PORT: 8787
+      OSC_TARGET_HOST: ${OSC_TARGET_HOST:-host.docker.internal}
+      OSC_TARGET_PORT: ${OSC_TARGET_PORT:-16447}
+      ALLOWED_ORIGIN: ${ALLOWED_ORIGIN:-*}
+    ports:
+      - "8787:8787"
+    volumes:
+      - .:/workspace
+
+  frontend-dev:
+    profiles: ["dev"]
+    image: node:22-alpine
+    working_dir: /workspace
+    command: sh -c "npm ci && vite --host 0.0.0.0 --port 5173"
+    environment:
+      VITE_OUTPUT_MODE: bridge
+      VITE_BRIDGE_WS_URL: ws://localhost:8787/ws
+    ports:
+      - "5173:5173"
+    depends_on:
+      bridge-dev:
+        condition: service_started
+    volumes:
+      - .:/workspace
