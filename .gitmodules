@@ -1,0 +1,3 @@
+[submodule "EmissionControl2"]
+	path = EmissionControl2
+	url = https://github.com/EmissionControl2/EmissionControl2
