@@ -450,10 +450,8 @@ async function main() {
   };
 
   let resolveHelloWaiter = null;
-  let rejectHelloWaiter = null;
-  const helloPromise = new Promise((resolve, reject) => {
+  const helloPromise = new Promise((resolve) => {
     resolveHelloWaiter = resolve;
-    rejectHelloWaiter = reject;
   });
 
   const onTelemetryMessage = (message) => {
@@ -483,7 +481,6 @@ async function main() {
       if (resolveHelloWaiter) {
         resolveHelloWaiter(hello);
         resolveHelloWaiter = null;
-        rejectHelloWaiter = null;
       }
       return;
     }
