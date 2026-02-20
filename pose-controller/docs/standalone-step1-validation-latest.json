@@ -1,0 +1,687 @@
+{
+  "validation": "step1",
+  "checklistItems": [
+    "A3",
+    "B3"
+  ],
+  "startedAt": "2026-02-19T17:45:47.766Z",
+  "settings": {
+    "autoStart": false,
+    "autoStartAudio": false,
+    "noAudio": false,
+    "timeoutMs": 20000,
+    "pollIntervalMs": 150
+  },
+  "b3": {
+    "ok": true,
+    "initialSnapshot": {
+      "timestampMs": 1771523147833,
+      "protocolValue": "osc",
+      "managedChecked": true,
+      "startupAutoTransportChecked": false,
+      "hostValue": "127.0.0.1",
+      "hostDisabled": true,
+      "portValue": "16447",
+      "portDisabled": true,
+      "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+      "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+      "bridgeMode": "Standalone Local",
+      "engineStatusText": "Engine unavailable",
+      "engineFeedbackText": "",
+      "audioBridgeFeedbackText": "",
+      "startupAuditTrail": []
+    },
+    "remoteSnapshot": {
+      "timestampMs": 1771523147951,
+      "protocolValue": "osc",
+      "managedChecked": false,
+      "startupAutoTransportChecked": false,
+      "hostValue": "192.168.0.99",
+      "hostDisabled": false,
+      "portValue": "17777",
+      "portDisabled": false,
+      "modeNote": "Remote mode active: OSC target is editable.",
+      "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+      "bridgeMode": "Remote Target",
+      "engineStatusText": "Engine stopped",
+      "engineFeedbackText": "Managed local engine mode disabled. Remote OSC target editing is enabled.",
+      "audioBridgeFeedbackText": "",
+      "startupAuditTrail": []
+    },
+    "relockedSnapshot": {
+      "timestampMs": 1771523148022,
+      "protocolValue": "osc",
+      "managedChecked": true,
+      "startupAutoTransportChecked": false,
+      "hostValue": "127.0.0.1",
+      "hostDisabled": true,
+      "portValue": "16447",
+      "portDisabled": true,
+      "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+      "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+      "bridgeMode": "Standalone Local",
+      "engineStatusText": "Engine stopped",
+      "engineFeedbackText": "Managed local engine mode enabled. OSC target locked to 127.0.0.1:16447.",
+      "audioBridgeFeedbackText": "",
+      "startupAuditTrail": []
+    },
+    "checks": {
+      "remoteModeUnlocked": true,
+      "remoteTargetEditableAndApplied": true,
+      "managedModeRelocked": true,
+      "statusIndicatorPresent": true
+    },
+    "errors": []
+  },
+  "a3": {
+    "ok": true,
+    "sequence": [
+      {
+        "command": "start",
+        "expectedStatus": "running"
+      },
+      {
+        "command": "stop",
+        "expectedStatus": "stopped"
+      },
+      {
+        "command": "restart",
+        "expectedStatus": "running"
+      },
+      {
+        "command": "stop",
+        "expectedStatus": "stopped"
+      },
+      {
+        "command": "start",
+        "expectedStatus": "running"
+      },
+      {
+        "command": "restart",
+        "expectedStatus": "running"
+      }
+    ],
+    "commandResults": [
+      {
+        "command": "start",
+        "expectedStatus": "running",
+        "ok": true,
+        "startedAt": "2026-02-19T17:45:48.022Z",
+        "completedAt": "2026-02-19T17:45:48.187Z",
+        "statusAfter": {
+          "ok": true,
+          "status": "running",
+          "pid": 41004,
+          "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+          "args": [
+            "--osc-host",
+            "127.0.0.1",
+            "--osc-port",
+            "16447",
+            "--telemetry-host",
+            "127.0.0.1",
+            "--telemetry-port",
+            "16448",
+            "--data-dir",
+            "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+            "--samples-dir",
+            "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          ],
+          "startedAtMs": 1771523148038,
+          "autoStartEnabled": false
+        },
+        "snapshotAfter": {
+          "timestampMs": 1771523148187,
+          "protocolValue": "osc",
+          "managedChecked": true,
+          "startupAutoTransportChecked": false,
+          "hostValue": "127.0.0.1",
+          "hostDisabled": true,
+          "portValue": "16447",
+          "portDisabled": true,
+          "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+          "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+          "bridgeMode": "Standalone Local",
+          "engineStatusText": "Engine running (PID 41004)",
+          "engineFeedbackText": "Engine start command accepted (starting).",
+          "audioBridgeFeedbackText": "",
+          "startupAuditTrail": [
+            "[18:45:48] STARTUP: engine_start_requested",
+            "[18:45:48] STARTUP: engine_running pid=41004"
+          ]
+        }
+      },
+      {
+        "command": "stop",
+        "expectedStatus": "stopped",
+        "ok": true,
+        "startedAt": "2026-02-19T17:45:48.187Z",
+        "completedAt": "2026-02-19T17:45:48.357Z",
+        "statusAfter": {
+          "ok": true,
+          "status": "stopped",
+          "pid": null,
+          "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+          "args": [
+            "--osc-host",
+            "127.0.0.1",
+            "--osc-port",
+            "16447",
+            "--telemetry-host",
+            "127.0.0.1",
+            "--telemetry-port",
+            "16448",
+            "--data-dir",
+            "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+            "--samples-dir",
+            "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          ],
+          "startedAtMs": 1771523148038,
+          "stoppedAtMs": 1771523148223,
+          "autoStartEnabled": false
+        },
+        "snapshotAfter": {
+          "timestampMs": 1771523148358,
+          "protocolValue": "osc",
+          "managedChecked": true,
+          "startupAutoTransportChecked": false,
+          "hostValue": "127.0.0.1",
+          "hostDisabled": true,
+          "portValue": "16447",
+          "portDisabled": true,
+          "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+          "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+          "bridgeMode": "Standalone Local",
+          "engineStatusText": "Engine stopped",
+          "engineFeedbackText": "Engine stop command accepted (stopped).",
+          "audioBridgeFeedbackText": "",
+          "startupAuditTrail": [
+            "[18:45:48] STARTUP: engine_start_requested",
+            "[18:45:48] STARTUP: engine_running pid=41004",
+            "[18:45:48] STARTUP: startup_sync_applied transport=none",
+            "[18:45:48] STARTUP: hello_received address=/ec2/hello",
+            "[18:45:48] STARTUP: startup_ready"
+          ]
+        }
+      },
+      {
+        "command": "restart",
+        "expectedStatus": "running",
+        "ok": true,
+        "startedAt": "2026-02-19T17:45:48.357Z",
+        "completedAt": "2026-02-19T17:45:48.447Z",
+        "statusAfter": {
+          "ok": true,
+          "status": "running",
+          "pid": 48104,
+          "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+          "args": [
+            "--osc-host",
+            "127.0.0.1",
+            "--osc-port",
+            "16447",
+            "--telemetry-host",
+            "127.0.0.1",
+            "--telemetry-port",
+            "16448",
+            "--data-dir",
+            "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+            "--samples-dir",
+            "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          ],
+          "startedAtMs": 1771523148363,
+          "autoStartEnabled": false
+        },
+        "snapshotAfter": {
+          "timestampMs": 1771523148447,
+          "protocolValue": "osc",
+          "managedChecked": true,
+          "startupAutoTransportChecked": false,
+          "hostValue": "127.0.0.1",
+          "hostDisabled": true,
+          "portValue": "16447",
+          "portDisabled": true,
+          "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+          "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+          "bridgeMode": "Standalone Local",
+          "engineStatusText": "Engine running (PID 48104)",
+          "engineFeedbackText": "Engine restart command accepted (starting).",
+          "audioBridgeFeedbackText": "",
+          "startupAuditTrail": [
+            "[18:45:48] STARTUP: engine_running pid=41004",
+            "[18:45:48] STARTUP: startup_sync_applied transport=none",
+            "[18:45:48] STARTUP: hello_received address=/ec2/hello",
+            "[18:45:48] STARTUP: startup_ready",
+            "[18:45:48] STARTUP: engine_start_requested",
+            "[18:45:48] STARTUP: engine_running pid=48104"
+          ]
+        }
+      },
+      {
+        "command": "stop",
+        "expectedStatus": "stopped",
+        "ok": true,
+        "startedAt": "2026-02-19T17:45:48.447Z",
+        "completedAt": "2026-02-19T17:45:48.457Z",
+        "statusAfter": {
+          "ok": true,
+          "status": "stopped",
+          "pid": null,
+          "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+          "args": [
+            "--osc-host",
+            "127.0.0.1",
+            "--osc-port",
+            "16447",
+            "--telemetry-host",
+            "127.0.0.1",
+            "--telemetry-port",
+            "16448",
+            "--data-dir",
+            "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+            "--samples-dir",
+            "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          ],
+          "startedAtMs": 1771523148363,
+          "stoppedAtMs": 1771523148449,
+          "autoStartEnabled": false
+        },
+        "snapshotAfter": {
+          "timestampMs": 1771523148458,
+          "protocolValue": "osc",
+          "managedChecked": true,
+          "startupAutoTransportChecked": false,
+          "hostValue": "127.0.0.1",
+          "hostDisabled": true,
+          "portValue": "16447",
+          "portDisabled": true,
+          "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+          "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+          "bridgeMode": "Standalone Local",
+          "engineStatusText": "Engine stopped",
+          "engineFeedbackText": "Engine stop command accepted (stopped).",
+          "audioBridgeFeedbackText": "",
+          "startupAuditTrail": [
+            "[18:45:48] STARTUP: engine_running pid=41004",
+            "[18:45:48] STARTUP: startup_sync_applied transport=none",
+            "[18:45:48] STARTUP: hello_received address=/ec2/hello",
+            "[18:45:48] STARTUP: startup_ready",
+            "[18:45:48] STARTUP: engine_start_requested",
+            "[18:45:48] STARTUP: engine_running pid=48104"
+          ]
+        }
+      },
+      {
+        "command": "start",
+        "expectedStatus": "running",
+        "ok": true,
+        "startedAt": "2026-02-19T17:45:48.457Z",
+        "completedAt": "2026-02-19T17:45:48.471Z",
+        "statusAfter": {
+          "ok": true,
+          "status": "running",
+          "pid": 47888,
+          "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+          "args": [
+            "--osc-host",
+            "127.0.0.1",
+            "--osc-port",
+            "16447",
+            "--telemetry-host",
+            "127.0.0.1",
+            "--telemetry-port",
+            "16448",
+            "--data-dir",
+            "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+            "--samples-dir",
+            "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          ],
+          "startedAtMs": 1771523148461,
+          "autoStartEnabled": false
+        },
+        "snapshotAfter": {
+          "timestampMs": 1771523148472,
+          "protocolValue": "osc",
+          "managedChecked": true,
+          "startupAutoTransportChecked": false,
+          "hostValue": "127.0.0.1",
+          "hostDisabled": true,
+          "portValue": "16447",
+          "portDisabled": true,
+          "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+          "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+          "bridgeMode": "Standalone Local",
+          "engineStatusText": "Engine running (PID 47888)",
+          "engineFeedbackText": "Engine start command accepted (starting).",
+          "audioBridgeFeedbackText": "",
+          "startupAuditTrail": [
+            "[18:45:48] STARTUP: hello_received address=/ec2/hello",
+            "[18:45:48] STARTUP: startup_ready",
+            "[18:45:48] STARTUP: engine_start_requested",
+            "[18:45:48] STARTUP: engine_running pid=48104",
+            "[18:45:48] STARTUP: engine_start_requested",
+            "[18:45:48] STARTUP: engine_running pid=47888"
+          ]
+        }
+      },
+      {
+        "command": "restart",
+        "expectedStatus": "running",
+        "ok": true,
+        "startedAt": "2026-02-19T17:45:48.471Z",
+        "completedAt": "2026-02-19T17:45:48.484Z",
+        "statusAfter": {
+          "ok": true,
+          "status": "running",
+          "pid": 46792,
+          "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+          "args": [
+            "--osc-host",
+            "127.0.0.1",
+            "--osc-port",
+            "16447",
+            "--telemetry-host",
+            "127.0.0.1",
+            "--telemetry-port",
+            "16448",
+            "--data-dir",
+            "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+            "--samples-dir",
+            "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          ],
+          "startedAtMs": 1771523148477,
+          "autoStartEnabled": false
+        },
+        "snapshotAfter": {
+          "timestampMs": 1771523148484,
+          "protocolValue": "osc",
+          "managedChecked": true,
+          "startupAutoTransportChecked": false,
+          "hostValue": "127.0.0.1",
+          "hostDisabled": true,
+          "portValue": "16447",
+          "portDisabled": true,
+          "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+          "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+          "bridgeMode": "Standalone Local",
+          "engineStatusText": "Engine running (PID 46792)",
+          "engineFeedbackText": "Engine restart command accepted (starting).",
+          "audioBridgeFeedbackText": "",
+          "startupAuditTrail": [
+            "[18:45:48] STARTUP: startup_ready",
+            "[18:45:48] STARTUP: engine_start_requested",
+            "[18:45:48] STARTUP: engine_running pid=48104",
+            "[18:45:48] STARTUP: engine_start_requested",
+            "[18:45:48] STARTUP: engine_running pid=47888",
+            "[18:45:48] STARTUP: engine_start_requested"
+          ]
+        }
+      }
+    ],
+    "logsTail": [
+      {
+        "timestampMs": 1771523147074,
+        "source": "system",
+        "line": "Managed engine autostart is disabled."
+      },
+      {
+        "timestampMs": 1771523148038,
+        "source": "system",
+        "line": "Engine started (pid=41004) using C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe"
+      },
+      {
+        "timestampMs": 1771523148049,
+        "source": "stdout",
+        "line": "[ec2_headless] version 1.2"
+      },
+      {
+        "timestampMs": 1771523148049,
+        "source": "stdout",
+        "line": "[ec2_headless] pid 41004"
+      },
+      {
+        "timestampMs": 1771523148049,
+        "source": "stdout",
+        "line": "[ec2_headless] osc 127.0.0.1:16447"
+      },
+      {
+        "timestampMs": 1771523148050,
+        "source": "stdout",
+        "line": "[ec2_headless] telemetry 127.0.0.1:16448"
+      },
+      {
+        "timestampMs": 1771523148050,
+        "source": "stdout",
+        "line": "[ec2_headless] telemetryIntervalMs 50"
+      },
+      {
+        "timestampMs": 1771523148050,
+        "source": "stdout",
+        "line": "[ec2_headless] dataDir C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2"
+      },
+      {
+        "timestampMs": 1771523148050,
+        "source": "stdout",
+        "line": "[ec2_headless] samplesDir C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+      },
+      {
+        "timestampMs": 1771523148050,
+        "source": "stdout",
+        "line": "[ec2_headless] autostartAudio 0"
+      },
+      {
+        "timestampMs": 1771523148050,
+        "source": "stdout",
+        "line": "[ec2_headless] noAudio 0"
+      },
+      {
+        "timestampMs": 1771523148051,
+        "source": "stdout",
+        "line": "[ec2_headless] sent /ec2/hello to 127.0.0.1:16448"
+      },
+      {
+        "timestampMs": 1771523148051,
+        "source": "stdout",
+        "line": "[ec2_headless] sending /ec2/telemetry/scan every 50ms"
+      },
+      {
+        "timestampMs": 1771523148222,
+        "source": "system",
+        "line": "Stopping engine (reason=ipc_stop)"
+      },
+      {
+        "timestampMs": 1771523148223,
+        "source": "system",
+        "line": "Engine exited (code=null, signal=SIGTERM, expected=true)"
+      },
+      {
+        "timestampMs": 1771523148363,
+        "source": "system",
+        "line": "Engine started (pid=48104) using C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe"
+      },
+      {
+        "timestampMs": 1771523148376,
+        "source": "stdout",
+        "line": "[ec2_headless] version 1.2"
+      },
+      {
+        "timestampMs": 1771523148376,
+        "source": "stdout",
+        "line": "[ec2_headless] pid 48104"
+      },
+      {
+        "timestampMs": 1771523148376,
+        "source": "stdout",
+        "line": "[ec2_headless] osc 127.0.0.1:16447"
+      },
+      {
+        "timestampMs": 1771523148376,
+        "source": "stdout",
+        "line": "[ec2_headless] telemetry 127.0.0.1:16448"
+      },
+      {
+        "timestampMs": 1771523148376,
+        "source": "stdout",
+        "line": "[ec2_headless] telemetryIntervalMs 50"
+      },
+      {
+        "timestampMs": 1771523148376,
+        "source": "stdout",
+        "line": "[ec2_headless] dataDir C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2"
+      },
+      {
+        "timestampMs": 1771523148376,
+        "source": "stdout",
+        "line": "[ec2_headless] samplesDir C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+      },
+      {
+        "timestampMs": 1771523148376,
+        "source": "stdout",
+        "line": "[ec2_headless] autostartAudio 0"
+      },
+      {
+        "timestampMs": 1771523148376,
+        "source": "stdout",
+        "line": "[ec2_headless] noAudio 0"
+      },
+      {
+        "timestampMs": 1771523148376,
+        "source": "stdout",
+        "line": "[ec2_headless] sent /ec2/hello to 127.0.0.1:16448"
+      },
+      {
+        "timestampMs": 1771523148377,
+        "source": "stdout",
+        "line": "[ec2_headless] sending /ec2/telemetry/scan every 50ms"
+      },
+      {
+        "timestampMs": 1771523148447,
+        "source": "system",
+        "line": "Stopping engine (reason=ipc_stop)"
+      },
+      {
+        "timestampMs": 1771523148449,
+        "source": "system",
+        "line": "Engine exited (code=null, signal=SIGTERM, expected=true)"
+      },
+      {
+        "timestampMs": 1771523148461,
+        "source": "system",
+        "line": "Engine started (pid=47888) using C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe"
+      },
+      {
+        "timestampMs": 1771523148472,
+        "source": "system",
+        "line": "Stopping engine (reason=restart)"
+      },
+      {
+        "timestampMs": 1771523148473,
+        "source": "system",
+        "line": "Engine exited (code=null, signal=SIGTERM, expected=true)"
+      },
+      {
+        "timestampMs": 1771523148477,
+        "source": "system",
+        "line": "Engine started (pid=46792) using C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe"
+      },
+      {
+        "timestampMs": 1771523148486,
+        "source": "system",
+        "line": "Stopping engine (reason=ipc_stop)"
+      },
+      {
+        "timestampMs": 1771523148487,
+        "source": "system",
+        "line": "Engine exited (code=null, signal=SIGTERM, expected=true)"
+      }
+    ],
+    "finalStatus": {
+      "ok": true,
+      "status": "stopped",
+      "pid": null,
+      "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+      "args": [
+        "--osc-host",
+        "127.0.0.1",
+        "--osc-port",
+        "16447",
+        "--telemetry-host",
+        "127.0.0.1",
+        "--telemetry-port",
+        "16448",
+        "--data-dir",
+        "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+        "--samples-dir",
+        "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+      ],
+      "startedAtMs": 1771523148477,
+      "stoppedAtMs": 1771523148487,
+      "autoStartEnabled": false
+    },
+    "errors": [],
+    "cleanupStop": {
+      "command": "stop",
+      "expectedStatus": "stopped",
+      "ok": true,
+      "startedAt": "2026-02-19T17:45:48.484Z",
+      "completedAt": "2026-02-19T17:45:48.492Z",
+      "statusAfter": {
+        "ok": true,
+        "status": "stopped",
+        "pid": null,
+        "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+        "args": [
+          "--osc-host",
+          "127.0.0.1",
+          "--osc-port",
+          "16447",
+          "--telemetry-host",
+          "127.0.0.1",
+          "--telemetry-port",
+          "16448",
+          "--data-dir",
+          "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+          "--samples-dir",
+          "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+        ],
+        "startedAtMs": 1771523148477,
+        "stoppedAtMs": 1771523148487,
+        "autoStartEnabled": false
+      },
+      "snapshotAfter": {
+        "timestampMs": 1771523148493,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine stopped",
+        "engineFeedbackText": "Engine stop command accepted (stopped).",
+        "audioBridgeFeedbackText": "",
+        "startupAuditTrail": [
+          "[18:45:48] STARTUP: engine_start_requested",
+          "[18:45:48] STARTUP: engine_running pid=48104",
+          "[18:45:48] STARTUP: engine_start_requested",
+          "[18:45:48] STARTUP: engine_running pid=47888",
+          "[18:45:48] STARTUP: engine_start_requested",
+          "[18:45:48] STARTUP: engine_running pid=46792"
+        ]
+      }
+    },
+    "checks": {
+      "startCountAtLeast2": true,
+      "stopCountAtLeast2": true,
+      "restartCountAtLeast2": true,
+      "noCommandFailures": true,
+      "mainProcessLogsObserved": true,
+      "rendererAlive": true
+    }
+  },
+  "pass": true,
+  "completedAt": "2026-02-19T17:45:48.494Z"
+}

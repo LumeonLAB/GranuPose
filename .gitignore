@@ -1,0 +1,36 @@
+# === Build artifacts ===
+.build/
+.tmp_asar/
+*.obj
+
+# === Pose Controller ===
+pose-controller/node_modules/
+pose-controller/dist/
+pose-controller/*.tsbuildinfo
+pose-controller/.env
+pose-controller/.env.local
+
+# === Engine binaries & resources (built/staged locally) ===
+pose-controller/engine-bin/
+pose-controller/engine-resources/
+
+# === Release / packaging artifacts ===
+pose-controller/release/
+pose-controller/release-artifacts/
+pose-controller/release-artifacts-rebuilt/
+pose-controller/release-artifacts-rebuilt-*/
+pose-controller/release-compliance/
+
+# === OS / editor junk ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# === Logs ===
+*.log
+npm-debug.log*
+

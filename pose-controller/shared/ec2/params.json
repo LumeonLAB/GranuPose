@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "1.0.0",
+  "sampleRateHz": 48000,
+  "params": [
+    {
+      "id": "grainRate",
+      "label": "Grain Rate",
+      "group": "timing",
+      "unit": "Hz",
+      "defaultValue": 1.0,
+      "defaultRange": [0.1, 100.0],
+      "absoluteRange": [0.0, 500.0],
+      "scalingDefault": "log",
+      "specialCases": {
+        "notes": ["Log scaling is recommended for musical control."]
+      }
+    },
+    {
+      "id": "asynchronicity",
+      "label": "Asynchronicity",
+      "group": "timing",
+      "unit": "normalized",
+      "defaultValue": 0.0,
+      "defaultRange": [0.0, 1.0],
+      "absoluteRange": [0.0, 1.0],
+      "scalingDefault": "linear",
+      "specialCases": {}
+    },
+    {
+      "id": "intermittency",
+      "label": "Intermittency",
+      "group": "timing",
+      "unit": "normalized",
+      "defaultValue": 0.0,
+      "defaultRange": [0.0, 1.0],
+      "absoluteRange": [0.0, 1.0],
+      "scalingDefault": "linear",
+      "specialCases": {}
+    },
+    {
+      "id": "streams",
+      "label": "Streams",
+      "group": "timing",
+      "unit": "count",
+      "defaultValue": 1,
+      "defaultRange": [1, 12],
+      "absoluteRange": [1, 20],
+      "scalingDefault": "linear",
+      "specialCases": {
+        "integer": true
+      }
+    },
+    {
+      "id": "playbackRate",
+      "label": "Playback Rate",
+      "group": "pitchFilter",
+      "unit": "ratio",
+      "defaultValue": 1.0,
+      "defaultRange": [-2.0, 2.0],
+      "absoluteRange": [-32.0, 32.0],
+      "scalingDefault": "linear",
+      "specialCases": {
+        "snapPoints": [-1.0, 0.0, 1.0],
+        "zeroMeaning": "freeze_or_silence"
+      }
+    },
+    {
+      "id": "filterCenter",
+      "label": "Filter Center",
+      "group": "pitchFilter",
+      "unit": "Hz",
+      "defaultValue": 440.0,
+      "defaultRange": [60.0, 5000.0],
+      "absoluteRange": [20.0, 24000.0],
+      "scalingDefault": "log",
+      "specialCases": {
+        "notes": ["Log scaling is recommended for musical control."]
+      }
+    },
+    {
+      "id": "resonance",
+      "label": "Resonance",
+      "group": "pitchFilter",
+      "unit": "normalized",
+      "defaultValue": 0.0,
+      "defaultRange": [0.0, 1.0],
+      "absoluteRange": [0.0, 1.0],
+      "scalingDefault": "linear",
+      "specialCases": {}
+    },
+    {
+      "id": "soundFile",
+      "label": "Sound File",
+      "group": "sourceScanning",
+      "unit": "index",
+      "defaultValue": 1,
+      "defaultRange": [1, 1],
+      "absoluteRange": [1, 1],
+      "scalingDefault": "linear",
+      "specialCases": {
+        "integer": true,
+        "dynamicRangeFromFileCount": true
+      }
+    },
+    {
+      "id": "scanBegin",
+      "label": "Scan Begin",
+      "group": "sourceScanning",
+      "unit": "normalized",
+      "defaultValue": 0.0,
+      "defaultRange": [0.0, 1.0],
+      "absoluteRange": [0.0, 1.0],
+      "scalingDefault": "linear",
+      "specialCases": {}
+    },
+    {
+      "id": "scanRange",
+      "label": "Scan Range",
+      "group": "sourceScanning",
+      "unit": "normalized",
+      "defaultValue": 0.5,
+      "defaultRange": [-1.0, 1.0],
+      "absoluteRange": [-1.0, 1.0],
+      "scalingDefault": "linear",
+      "specialCases": {}
+    },
+    {
+      "id": "scanSpeed",
+      "label": "Scan Speed",
+      "group": "sourceScanning",
+      "unit": "ratio",
+      "defaultValue": 1.0,
+      "defaultRange": [-2.0, 2.0],
+      "absoluteRange": [-32.0, 32.0],
+      "scalingDefault": "linear",
+      "specialCases": {
+        "zeroMeaning": "freeze_position"
+      }
+    },
+    {
+      "id": "grainDuration",
+      "label": "Grain Duration Control",
+      "group": "amplitudeSpaceTime",
+      "unit": "ms",
+      "defaultValue": 30.0,
+      "defaultRange": [0.046, 1000.0],
+      "absoluteRange": [0.046, 10000.0],
+      "scalingDefault": "linear",
+      "specialCases": {
+        "sampleRateDependentMinimum": true,
+        "minimumFormula": "1000 / sampleRateHz"
+      }
+    },
+    {
+      "id": "envelopeShape",
+      "label": "Envelope Shape",
+      "group": "amplitudeSpaceTime",
+      "unit": "normalized",
+      "defaultValue": 0.5,
+      "defaultRange": [0.0, 1.0],
+      "absoluteRange": [0.0, 1.0],
+      "scalingDefault": "linear",
+      "specialCases": {}
+    },
+    {
+      "id": "pan",
+      "label": "Pan",
+      "group": "amplitudeSpaceTime",
+      "unit": "normalized",
+      "defaultValue": 0.0,
+      "defaultRange": [-1.0, 1.0],
+      "absoluteRange": [-1.0, 1.0],
+      "scalingDefault": "linear",
+      "specialCases": {
+        "notes": ["-1 left, 0 center, 1 right"]
+      }
+    },
+    {
+      "id": "amplitude",
+      "label": "Amplitude",
+      "group": "amplitudeSpaceTime",
+      "unit": "dB",
+      "defaultValue": -6.0,
+      "defaultRange": [-60.0, 24.0],
+      "absoluteRange": [-180.0, 48.0],
+      "scalingDefault": "linear",
+      "specialCases": {}
+    }
+  ]
+}

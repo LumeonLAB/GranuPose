@@ -1,0 +1,942 @@
+{
+  "validation": "step3",
+  "checklistItems": [
+    "D1",
+    "D2"
+  ],
+  "startedAt": "2026-02-19T18:14:42.869Z",
+  "settings": {
+    "autoStart": false,
+    "autoStartAudio": false,
+    "noAudio": false,
+    "timeoutMs": 20000,
+    "pollIntervalMs": 150,
+    "d1RecordMs": 10000,
+    "d2CycleRecordMs": 3000,
+    "cycleCount": 3,
+    "settleAfterStopMs": 450,
+    "requestedFileName": "take.wav"
+  },
+  "preflight": {
+    "outputDir": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+    "setProtocol": {
+      "ok": true,
+      "snapshot": {
+        "timestampMs": 1771524882945,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine unavailable",
+        "engineFeedbackText": "",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "pose_take.wav",
+        "outputFolderValue": "",
+        "startupAuditTrail": []
+      }
+    },
+    "setManaged": {
+      "ok": true,
+      "snapshot": {
+        "timestampMs": 1771524882980,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine unavailable",
+        "engineFeedbackText": "",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "pose_take.wav",
+        "outputFolderValue": "",
+        "startupAuditTrail": []
+      }
+    },
+    "setStartupAutoTransport": {
+      "ok": true,
+      "snapshot": {
+        "timestampMs": 1771524882993,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine stopped",
+        "engineFeedbackText": "",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "pose_take.wav",
+        "outputFolderValue": "",
+        "startupAuditTrail": []
+      }
+    },
+    "snapshot": {
+      "timestampMs": 1771524882996,
+      "protocolValue": "osc",
+      "managedChecked": true,
+      "startupAutoTransportChecked": false,
+      "hostValue": "127.0.0.1",
+      "hostDisabled": true,
+      "portValue": "16447",
+      "portDisabled": true,
+      "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+      "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+      "bridgeMode": "Standalone Local",
+      "engineStatusText": "Engine stopped",
+      "engineFeedbackText": "",
+      "audioBridgeFeedbackText": "",
+      "recordFileNameValue": "pose_take.wav",
+      "outputFolderValue": "",
+      "startupAuditTrail": []
+    },
+    "startResult": {
+      "command": "start",
+      "expectedStatus": "running",
+      "ok": true,
+      "startedAt": "2026-02-19T18:14:43.005Z",
+      "completedAt": "2026-02-19T18:14:43.194Z",
+      "statusAfter": {
+        "ok": true,
+        "status": "running",
+        "pid": 46800,
+        "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+        "args": [
+          "--osc-host",
+          "127.0.0.1",
+          "--osc-port",
+          "16447",
+          "--telemetry-host",
+          "127.0.0.1",
+          "--telemetry-port",
+          "16448",
+          "--data-dir",
+          "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+          "--samples-dir",
+          "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+        ],
+        "startedAtMs": 1771524883062,
+        "autoStartEnabled": false
+      },
+      "snapshotAfter": {
+        "timestampMs": 1771524883194,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine running (PID 46800)",
+        "engineFeedbackText": "Engine start command accepted (starting).",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "pose_take.wav",
+        "outputFolderValue": "",
+        "startupAuditTrail": [
+          "[19:14:43] STARTUP: engine_start_requested",
+          "[19:14:43] STARTUP: engine_running pid=46800"
+        ]
+      }
+    },
+    "hello": {
+      "source": "electron",
+      "timestampMs": 1771524883077,
+      "address": "/ec2/hello",
+      "args": [
+        "version=1.2",
+        "build=Feb 19 2026 19:14:34",
+        "pid=46800",
+        "osc=127.0.0.1:16447",
+        "telemetry=127.0.0.1:16448",
+        "sampleRate=48000",
+        "bufferSize=1024",
+        "channelsOut=2",
+        "telemetryIntervalMs=50",
+        "autostartAudio=0",
+        "noAudio=0",
+        "startupTransport=0",
+        "dataDir=C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+        "samplesDir=C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+      ]
+    },
+    "transportOnAction": {
+      "ok": true,
+      "state": "on",
+      "snapshot": {
+        "timestampMs": 1771524883234,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine running (PID 46800)",
+        "engineFeedbackText": "Engine start command accepted (starting).",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "pose_take.wav",
+        "outputFolderValue": "",
+        "startupAuditTrail": [
+          "[19:14:43] STARTUP: engine_start_requested",
+          "[19:14:43] STARTUP: engine_running pid=46800",
+          "[19:14:43] STARTUP: startup_sync_applied transport=none",
+          "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+          "[19:14:43] STARTUP: startup_ready"
+        ]
+      }
+    },
+    "setOutputFolder": {
+      "ok": true,
+      "snapshot": {
+        "timestampMs": 1771524883329,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine running (PID 46800)",
+        "engineFeedbackText": "Engine start command accepted (starting).",
+        "audioBridgeFeedbackText": "Audio engine ON.",
+        "recordFileNameValue": "pose_take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": [
+          "[19:14:43] STARTUP: engine_start_requested",
+          "[19:14:43] STARTUP: engine_running pid=46800",
+          "[19:14:43] STARTUP: startup_sync_applied transport=none",
+          "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+          "[19:14:43] STARTUP: startup_ready"
+        ]
+      }
+    },
+    "setRecordFileName": {
+      "ok": true,
+      "snapshot": {
+        "timestampMs": 1771524883362,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine running (PID 46800)",
+        "engineFeedbackText": "Engine start command accepted (starting).",
+        "audioBridgeFeedbackText": "Audio engine ON.",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": [
+          "[19:14:43] STARTUP: engine_start_requested",
+          "[19:14:43] STARTUP: engine_running pid=46800",
+          "[19:14:43] STARTUP: startup_sync_applied transport=none",
+          "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+          "[19:14:43] STARTUP: startup_ready"
+        ]
+      }
+    },
+    "recordSnapshot": {
+      "timestampMs": 1771524883414,
+      "protocolValue": "osc",
+      "managedChecked": true,
+      "startupAutoTransportChecked": false,
+      "hostValue": "127.0.0.1",
+      "hostDisabled": true,
+      "portValue": "16447",
+      "portDisabled": true,
+      "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+      "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+      "bridgeMode": "Standalone Local",
+      "engineStatusText": "Engine running (PID 46800)",
+      "engineFeedbackText": "Engine start command accepted (starting).",
+      "audioBridgeFeedbackText": "Audio engine ON.",
+      "recordFileNameValue": "take.wav",
+      "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+      "startupAuditTrail": [
+        "[19:14:43] STARTUP: engine_start_requested",
+        "[19:14:43] STARTUP: engine_running pid=46800",
+        "[19:14:43] STARTUP: startup_sync_applied transport=none",
+        "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+        "[19:14:43] STARTUP: startup_ready"
+      ]
+    }
+  },
+  "d1": {
+    "ok": true,
+    "cycle": {
+      "label": "d1_single_cycle",
+      "durationMs": 10000,
+      "startedAtMs": 1771524883414,
+      "completedAtMs": 1771524893889,
+      "startAction": {
+        "ok": true,
+        "state": "start",
+        "snapshot": {
+          "timestampMs": 1771524883416,
+          "protocolValue": "osc",
+          "managedChecked": true,
+          "startupAutoTransportChecked": false,
+          "hostValue": "127.0.0.1",
+          "hostDisabled": true,
+          "portValue": "16447",
+          "portDisabled": true,
+          "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+          "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+          "bridgeMode": "Standalone Local",
+          "engineStatusText": "Engine running (PID 46800)",
+          "engineFeedbackText": "Engine start command accepted (starting).",
+          "audioBridgeFeedbackText": "Audio engine ON.",
+          "recordFileNameValue": "take.wav",
+          "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+          "startupAuditTrail": [
+            "[19:14:43] STARTUP: engine_start_requested",
+            "[19:14:43] STARTUP: engine_running pid=46800",
+            "[19:14:43] STARTUP: startup_sync_applied transport=none",
+            "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+            "[19:14:43] STARTUP: startup_ready"
+          ]
+        }
+      },
+      "stopAction": {
+        "ok": true,
+        "state": "stop",
+        "snapshot": {
+          "timestampMs": 1771524893438,
+          "protocolValue": "osc",
+          "managedChecked": true,
+          "startupAutoTransportChecked": false,
+          "hostValue": "127.0.0.1",
+          "hostDisabled": true,
+          "portValue": "16447",
+          "portDisabled": true,
+          "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+          "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+          "bridgeMode": "Standalone Local",
+          "engineStatusText": "Engine running (PID 46800)",
+          "engineFeedbackText": "Engine start command accepted (starting).",
+          "audioBridgeFeedbackText": "Audio engine ON.",
+          "recordFileNameValue": "take.wav",
+          "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+          "startupAuditTrail": [
+            "[19:14:43] STARTUP: engine_start_requested",
+            "[19:14:43] STARTUP: engine_running pid=46800",
+            "[19:14:43] STARTUP: startup_sync_applied transport=none",
+            "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+            "[19:14:43] STARTUP: startup_ready"
+          ]
+        }
+      },
+      "filesBefore": [],
+      "filesAfter": [
+        {
+          "name": "take.wav",
+          "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav",
+          "sizeBytes": 1923100,
+          "mtimeMs": 1771524893438.6233
+        }
+      ],
+      "createdFiles": [
+        {
+          "name": "take.wav",
+          "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav",
+          "sizeBytes": 1923100,
+          "mtimeMs": 1771524893438.6233
+        }
+      ],
+      "createdFileCount": 1,
+      "createdFilesNonZero": true,
+      "logs": [
+        {
+          "timestampMs": 1771524883415,
+          "source": "stdout",
+          "line": "[ec2_headless] record fileName take.wav"
+        },
+        {
+          "timestampMs": 1771524883416,
+          "source": "stdout",
+          "line": "[ec2_headless] record 1 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav"
+        },
+        {
+          "timestampMs": 1771524893438,
+          "source": "stdout",
+          "line": "[ec2_headless] record 0 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav frames 480764 reason osc"
+        }
+      ],
+      "recordStartLogObserved": true,
+      "recordStopLogObserved": true
+    },
+    "checks": {
+      "recordStartActionSucceeded": true,
+      "recordStopActionSucceeded": true,
+      "createdFileObserved": true,
+      "createdFileNonZeroBytes": true,
+      "recordStartLogObserved": true,
+      "recordStopLogObserved": true,
+      "engineStillRunningAfterD1": true
+    },
+    "engineStatusAfterCycle": {
+      "ok": true,
+      "status": "running",
+      "pid": 46800,
+      "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+      "args": [
+        "--osc-host",
+        "127.0.0.1",
+        "--osc-port",
+        "16447",
+        "--telemetry-host",
+        "127.0.0.1",
+        "--telemetry-port",
+        "16448",
+        "--data-dir",
+        "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+        "--samples-dir",
+        "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+      ],
+      "startedAtMs": 1771524883062,
+      "autoStartEnabled": false
+    },
+    "logsTail": [
+      {
+        "timestampMs": 1771524883415,
+        "source": "stdout",
+        "line": "[ec2_headless] record fileName take.wav"
+      },
+      {
+        "timestampMs": 1771524883416,
+        "source": "stdout",
+        "line": "[ec2_headless] record 1 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav"
+      },
+      {
+        "timestampMs": 1771524893438,
+        "source": "stdout",
+        "line": "[ec2_headless] record 0 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav frames 480764 reason osc"
+      }
+    ],
+    "errors": []
+  },
+  "d2": {
+    "ok": true,
+    "cycles": [
+      {
+        "cycle": 1,
+        "label": "d2_cycle_1",
+        "durationMs": 3000,
+        "startedAtMs": 1771524893890,
+        "completedAtMs": 1771524897367,
+        "startAction": {
+          "ok": true,
+          "state": "start",
+          "snapshot": {
+            "timestampMs": 1771524893891,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 46800)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine ON.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:14:43] STARTUP: engine_start_requested",
+              "[19:14:43] STARTUP: engine_running pid=46800",
+              "[19:14:43] STARTUP: startup_sync_applied transport=none",
+              "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+              "[19:14:43] STARTUP: startup_ready"
+            ]
+          }
+        },
+        "stopAction": {
+          "ok": true,
+          "state": "stop",
+          "snapshot": {
+            "timestampMs": 1771524896913,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 46800)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine ON.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:14:43] STARTUP: engine_start_requested",
+              "[19:14:43] STARTUP: engine_running pid=46800",
+              "[19:14:43] STARTUP: startup_sync_applied transport=none",
+              "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+              "[19:14:43] STARTUP: startup_ready"
+            ]
+          }
+        },
+        "filesBefore": [
+          {
+            "name": "take.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav",
+            "sizeBytes": 1923100,
+            "mtimeMs": 1771524893438.6233
+          }
+        ],
+        "filesAfter": [
+          {
+            "name": "take_1.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav",
+            "sizeBytes": 579248,
+            "mtimeMs": 1771524896913.3767
+          },
+          {
+            "name": "take.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav",
+            "sizeBytes": 1923100,
+            "mtimeMs": 1771524893438.6233
+          }
+        ],
+        "createdFiles": [
+          {
+            "name": "take_1.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav",
+            "sizeBytes": 579248,
+            "mtimeMs": 1771524896913.3767
+          }
+        ],
+        "createdFileCount": 1,
+        "createdFilesNonZero": true,
+        "logs": [
+          {
+            "timestampMs": 1771524893890,
+            "source": "stdout",
+            "line": "[ec2_headless] record fileName take.wav"
+          },
+          {
+            "timestampMs": 1771524893891,
+            "source": "stdout",
+            "line": "[ec2_headless] record 1 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav"
+          },
+          {
+            "timestampMs": 1771524896912,
+            "source": "stdout",
+            "line": "[ec2_headless] record 0 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav frames 144801 reason osc"
+          }
+        ],
+        "recordStartLogObserved": true,
+        "recordStopLogObserved": true
+      },
+      {
+        "cycle": 2,
+        "label": "d2_cycle_2",
+        "durationMs": 3000,
+        "startedAtMs": 1771524897368,
+        "completedAtMs": 1771524900840,
+        "startAction": {
+          "ok": true,
+          "state": "start",
+          "snapshot": {
+            "timestampMs": 1771524897369,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 46800)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine ON.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:14:43] STARTUP: engine_start_requested",
+              "[19:14:43] STARTUP: engine_running pid=46800",
+              "[19:14:43] STARTUP: startup_sync_applied transport=none",
+              "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+              "[19:14:43] STARTUP: startup_ready"
+            ]
+          }
+        },
+        "stopAction": {
+          "ok": true,
+          "state": "stop",
+          "snapshot": {
+            "timestampMs": 1771524900389,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 46800)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine ON.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:14:43] STARTUP: engine_start_requested",
+              "[19:14:43] STARTUP: engine_running pid=46800",
+              "[19:14:43] STARTUP: startup_sync_applied transport=none",
+              "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+              "[19:14:43] STARTUP: startup_ready"
+            ]
+          }
+        },
+        "filesBefore": [
+          {
+            "name": "take_1.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav",
+            "sizeBytes": 579248,
+            "mtimeMs": 1771524896913.3767
+          },
+          {
+            "name": "take.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav",
+            "sizeBytes": 1923100,
+            "mtimeMs": 1771524893438.6233
+          }
+        ],
+        "filesAfter": [
+          {
+            "name": "take_1.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav",
+            "sizeBytes": 579248,
+            "mtimeMs": 1771524896913.3767
+          },
+          {
+            "name": "take_2.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_2.wav",
+            "sizeBytes": 579116,
+            "mtimeMs": 1771524900390.24
+          },
+          {
+            "name": "take.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav",
+            "sizeBytes": 1923100,
+            "mtimeMs": 1771524893438.6233
+          }
+        ],
+        "createdFiles": [
+          {
+            "name": "take_2.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_2.wav",
+            "sizeBytes": 579116,
+            "mtimeMs": 1771524900390.24
+          }
+        ],
+        "createdFileCount": 1,
+        "createdFilesNonZero": true,
+        "logs": [
+          {
+            "timestampMs": 1771524897369,
+            "source": "stdout",
+            "line": "[ec2_headless] record fileName take.wav"
+          },
+          {
+            "timestampMs": 1771524897369,
+            "source": "stdout",
+            "line": "[ec2_headless] record 1 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_2.wav"
+          },
+          {
+            "timestampMs": 1771524900389,
+            "source": "stdout",
+            "line": "[ec2_headless] record 0 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_2.wav frames 144768 reason osc"
+          }
+        ],
+        "recordStartLogObserved": true,
+        "recordStopLogObserved": true
+      },
+      {
+        "cycle": 3,
+        "label": "d2_cycle_3",
+        "durationMs": 3000,
+        "startedAtMs": 1771524900841,
+        "completedAtMs": 1771524904315,
+        "startAction": {
+          "ok": true,
+          "state": "start",
+          "snapshot": {
+            "timestampMs": 1771524900842,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 46800)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine ON.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:14:43] STARTUP: engine_start_requested",
+              "[19:14:43] STARTUP: engine_running pid=46800",
+              "[19:14:43] STARTUP: startup_sync_applied transport=none",
+              "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+              "[19:14:43] STARTUP: startup_ready"
+            ]
+          }
+        },
+        "stopAction": {
+          "ok": true,
+          "state": "stop",
+          "snapshot": {
+            "timestampMs": 1771524903865,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 46800)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine ON.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:14:43] STARTUP: engine_start_requested",
+              "[19:14:43] STARTUP: engine_running pid=46800",
+              "[19:14:43] STARTUP: startup_sync_applied transport=none",
+              "[19:14:43] STARTUP: hello_received address=/ec2/hello",
+              "[19:14:43] STARTUP: startup_ready"
+            ]
+          }
+        },
+        "filesBefore": [
+          {
+            "name": "take_1.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav",
+            "sizeBytes": 579248,
+            "mtimeMs": 1771524896913.3767
+          },
+          {
+            "name": "take_2.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_2.wav",
+            "sizeBytes": 579116,
+            "mtimeMs": 1771524900390.24
+          },
+          {
+            "name": "take.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav",
+            "sizeBytes": 1923100,
+            "mtimeMs": 1771524893438.6233
+          }
+        ],
+        "filesAfter": [
+          {
+            "name": "take_1.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav",
+            "sizeBytes": 579248,
+            "mtimeMs": 1771524896913.3767
+          },
+          {
+            "name": "take_2.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_2.wav",
+            "sizeBytes": 579116,
+            "mtimeMs": 1771524900390.24
+          },
+          {
+            "name": "take_3.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_3.wav",
+            "sizeBytes": 579724,
+            "mtimeMs": 1771524903865.0574
+          },
+          {
+            "name": "take.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav",
+            "sizeBytes": 1923100,
+            "mtimeMs": 1771524893438.6233
+          }
+        ],
+        "createdFiles": [
+          {
+            "name": "take_3.wav",
+            "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_3.wav",
+            "sizeBytes": 579724,
+            "mtimeMs": 1771524903865.0574
+          }
+        ],
+        "createdFileCount": 1,
+        "createdFilesNonZero": true,
+        "logs": [
+          {
+            "timestampMs": 1771524900842,
+            "source": "stdout",
+            "line": "[ec2_headless] record fileName take.wav"
+          },
+          {
+            "timestampMs": 1771524900842,
+            "source": "stdout",
+            "line": "[ec2_headless] record 1 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_3.wav"
+          },
+          {
+            "timestampMs": 1771524903865,
+            "source": "stdout",
+            "line": "[ec2_headless] record 0 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_3.wav frames 144920 reason osc"
+          }
+        ],
+        "recordStartLogObserved": true,
+        "recordStopLogObserved": true
+      }
+    ],
+    "filesAfterAllCycles": [
+      {
+        "name": "take_1.wav",
+        "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav",
+        "sizeBytes": 579248,
+        "mtimeMs": 1771524896913.3767
+      },
+      {
+        "name": "take_2.wav",
+        "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_2.wav",
+        "sizeBytes": 579116,
+        "mtimeMs": 1771524900390.24
+      },
+      {
+        "name": "take_3.wav",
+        "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_3.wav",
+        "sizeBytes": 579724,
+        "mtimeMs": 1771524903865.0574
+      },
+      {
+        "name": "take.wav",
+        "path": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take.wav",
+        "sizeBytes": 1923100,
+        "mtimeMs": 1771524893438.6233
+      }
+    ],
+    "checks": {
+      "cycleCountAtLeastThree": true,
+      "allRecordActionsSucceeded": true,
+      "filesCreatedEachCycle": true,
+      "everyCreatedFileNonZeroBytes": true,
+      "collisionPolicyObserved": true,
+      "engineStillRunningAfterD2": true,
+      "recordStartLogsObserved": true,
+      "recordStopLogsObserved": true,
+      "noUnexpectedExitLog": true
+    },
+    "engineStatusAfterCycles": {
+      "ok": true,
+      "status": "running",
+      "pid": 46800,
+      "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+      "args": [
+        "--osc-host",
+        "127.0.0.1",
+        "--osc-port",
+        "16447",
+        "--telemetry-host",
+        "127.0.0.1",
+        "--telemetry-port",
+        "16448",
+        "--data-dir",
+        "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+        "--samples-dir",
+        "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+      ],
+      "startedAtMs": 1771524883062,
+      "autoStartEnabled": false
+    },
+    "logsTail": [
+      {
+        "timestampMs": 1771524893890,
+        "source": "stdout",
+        "line": "[ec2_headless] record fileName take.wav"
+      },
+      {
+        "timestampMs": 1771524893891,
+        "source": "stdout",
+        "line": "[ec2_headless] record 1 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav"
+      },
+      {
+        "timestampMs": 1771524896912,
+        "source": "stdout",
+        "line": "[ec2_headless] record 0 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_1.wav frames 144801 reason osc"
+      },
+      {
+        "timestampMs": 1771524897369,
+        "source": "stdout",
+        "line": "[ec2_headless] record fileName take.wav"
+      },
+      {
+        "timestampMs": 1771524897369,
+        "source": "stdout",
+        "line": "[ec2_headless] record 1 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_2.wav"
+      },
+      {
+        "timestampMs": 1771524900389,
+        "source": "stdout",
+        "line": "[ec2_headless] record 0 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_2.wav frames 144768 reason osc"
+      },
+      {
+        "timestampMs": 1771524900842,
+        "source": "stdout",
+        "line": "[ec2_headless] record fileName take.wav"
+      },
+      {
+        "timestampMs": 1771524900842,
+        "source": "stdout",
+        "line": "[ec2_headless] record 1 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_3.wav"
+      },
+      {
+        "timestampMs": 1771524903865,
+        "source": "stdout",
+        "line": "[ec2_headless] record 0 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869\\take_3.wav frames 144920 reason osc"
+      }
+    ],
+    "errors": []
+  },
+  "pass": true,
+  "completedAt": "2026-02-19T18:15:04.415Z"
+}

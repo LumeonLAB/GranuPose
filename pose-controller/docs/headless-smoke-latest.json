@@ -1,0 +1,221 @@
+{
+  "generatedAt": "2026-02-20T13:07:02.824Z",
+  "pass": true,
+  "config": {
+    "oscHost": "127.0.0.1",
+    "oscPort": 17447,
+    "telemetryHost": "127.0.0.1",
+    "telemetryPort": 17448,
+    "timeoutMs": 15000,
+    "noAudio": true,
+    "autostartAudio": false,
+    "outputPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\docs\\headless-smoke-latest.json",
+    "keepTemp": false
+  },
+  "runtime": {
+    "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\win32\\ec2_headless.exe",
+    "args": [
+      "--osc-host",
+      "127.0.0.1",
+      "--osc-port",
+      "17447",
+      "--telemetry-host",
+      "127.0.0.1",
+      "--telemetry-port",
+      "17448",
+      "--telemetry-interval-ms",
+      "50",
+      "--data-dir",
+      "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-headless-smoke-1771592822825-5856",
+      "--samples-dir",
+      "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples",
+      "--no-audio"
+    ],
+    "dataDir": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-headless-smoke-1771592822825-5856",
+    "samplesDir": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples",
+    "libsDir": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\libs",
+    "binaryCandidates": [
+      "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\win32\\ec2_headless.exe",
+      "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\ec2_headless.exe",
+      "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+      "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe"
+    ]
+  },
+  "assertions": {
+    "helloObserved": true,
+    "scanObserved": true,
+    "processAliveAfterCommands": true,
+    "amplitudeCommandDispatched": true,
+    "transportCommandsDispatched": true,
+    "transportEvidence": true,
+    "transportOneMarker": true,
+    "transportZeroMarker": false,
+    "transportIgnoredNoAudioMarker": true
+  },
+  "telemetry": {
+    "hello": {
+      "timestampMs": 1771592822918,
+      "address": "/ec2/hello",
+      "args": [
+        "version=1.2",
+        "build=Feb 20 2026 14:06:44",
+        "pid=36004",
+        "osc=127.0.0.1:17447",
+        "telemetry=127.0.0.1:17448",
+        "sampleRate=48000",
+        "bufferSize=1024",
+        "channelsOut=2",
+        "telemetryIntervalMs=50",
+        "autostartAudio=0",
+        "noAudio=1",
+        "startupTransport=0",
+        "dataDir=C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-headless-smoke-1771592822825-5856",
+        "samplesDir=C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+      ]
+    },
+    "helloArgsMap": {
+      "version": "1.2",
+      "build": "Feb 20 2026 14:06:44",
+      "pid": "36004",
+      "osc": "127.0.0.1:17447",
+      "telemetry": "127.0.0.1:17448",
+      "sampleRate": "48000",
+      "bufferSize": "1024",
+      "channelsOut": "2",
+      "telemetryIntervalMs": "50",
+      "autostartAudio": "0",
+      "noAudio": "1",
+      "startupTransport": "0",
+      "dataDir": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-headless-smoke-1771592822825-5856",
+      "samplesDir": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+    },
+    "totalScans": 19,
+    "scanStats": {
+      "count": 15,
+      "elapsedMs": 844,
+      "cadenceHz": 17.77251184834123,
+      "playheadSpan": 0,
+      "scanHeadSpan": 0,
+      "scanRangeSpan": 0
+    }
+  },
+  "commandsSent": [
+    {
+      "timestampMs": 1771592823168,
+      "address": "/Amplitude",
+      "args": [
+        {
+          "type": "f",
+          "value": 0.42
+        }
+      ]
+    },
+    {
+      "timestampMs": 1771592823370,
+      "address": "/transport",
+      "args": [
+        {
+          "type": "i",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "timestampMs": 1771592823670,
+      "address": "/transport",
+      "args": [
+        {
+          "type": "i",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "process": {
+    "pid": 36004,
+    "exitCode": null,
+    "signal": "SIGTERM",
+    "forcedKill": false
+  },
+  "logs": {
+    "stdoutTail": [
+      {
+        "timestampMs": 1771592822917,
+        "channel": "stdout",
+        "line": "[ec2_headless] version 1.2"
+      },
+      {
+        "timestampMs": 1771592822917,
+        "channel": "stdout",
+        "line": "[ec2_headless] pid 36004"
+      },
+      {
+        "timestampMs": 1771592822917,
+        "channel": "stdout",
+        "line": "[ec2_headless] osc 127.0.0.1:17447"
+      },
+      {
+        "timestampMs": 1771592822917,
+        "channel": "stdout",
+        "line": "[ec2_headless] telemetry 127.0.0.1:17448"
+      },
+      {
+        "timestampMs": 1771592822917,
+        "channel": "stdout",
+        "line": "[ec2_headless] telemetryIntervalMs 50"
+      },
+      {
+        "timestampMs": 1771592822917,
+        "channel": "stdout",
+        "line": "[ec2_headless] dataDir C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-headless-smoke-1771592822825-5856"
+      },
+      {
+        "timestampMs": 1771592822917,
+        "channel": "stdout",
+        "line": "[ec2_headless] samplesDir C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+      },
+      {
+        "timestampMs": 1771592822917,
+        "channel": "stdout",
+        "line": "[ec2_headless] autostartAudio 0"
+      },
+      {
+        "timestampMs": 1771592822917,
+        "channel": "stdout",
+        "line": "[ec2_headless] noAudio 1"
+      },
+      {
+        "timestampMs": 1771592822918,
+        "channel": "stdout",
+        "line": "[ec2_headless] sent /ec2/hello to 127.0.0.1:17448"
+      },
+      {
+        "timestampMs": 1771592822918,
+        "channel": "stdout",
+        "line": "[ec2_headless] sending /ec2/telemetry/scan every 50ms"
+      },
+      {
+        "timestampMs": 1771592822918,
+        "channel": "stdout",
+        "line": "[ec2_headless] soundFile index 1 path C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples\\440sine48k.wav frames 48001 (startup default)"
+      },
+      {
+        "timestampMs": 1771592822976,
+        "channel": "stdout",
+        "line": "[ec2_headless] audio disabled by --no-audio"
+      },
+      {
+        "timestampMs": 1771592823168,
+        "channel": "stdout",
+        "line": "[ec2_headless] param Amplitude raw -24.72 norm 0.42"
+      },
+      {
+        "timestampMs": 1771592823370,
+        "channel": "stdout",
+        "line": "[ec2_headless] ignored /transport 1 because --no-audio is active"
+      }
+    ],
+    "stderrTail": []
+  },
+  "errors": []
+}

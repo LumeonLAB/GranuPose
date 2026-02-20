@@ -1,0 +1,944 @@
+{
+  "generatedAt": "2026-02-20T12:07:05.898Z",
+  "pass": true,
+  "config": {
+    "oscHost": "127.0.0.1",
+    "oscPort": 18447,
+    "telemetryHost": "127.0.0.1",
+    "telemetryPort": 18448,
+    "timeoutMs": 20000,
+    "noAudio": false,
+    "autostartAudio": false,
+    "outputPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\docs\\b2-ec2-matrix-evidence-latest.json",
+    "keepTemp": false
+  },
+  "runtime": {
+    "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\win32\\ec2_headless.exe",
+    "args": [
+      "--osc-host",
+      "127.0.0.1",
+      "--osc-port",
+      "18447",
+      "--telemetry-host",
+      "127.0.0.1",
+      "--telemetry-port",
+      "18448",
+      "--telemetry-interval-ms",
+      "50",
+      "--data-dir",
+      "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749",
+      "--samples-dir",
+      "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+    ],
+    "dataDir": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749",
+    "samplesDir": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples",
+    "libsDir": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\libs",
+    "binaryCandidates": [
+      "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\win32\\ec2_headless.exe",
+      "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\ec2_headless.exe",
+      "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+      "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe"
+    ]
+  },
+  "telemetry": {
+    "hello": {
+      "timestampMs": 1771589225922,
+      "address": "/ec2/hello",
+      "args": [
+        "version=1.2",
+        "build=Feb 20 2026 12:17:04",
+        "pid=46720",
+        "osc=127.0.0.1:18447",
+        "telemetry=127.0.0.1:18448",
+        "sampleRate=48000",
+        "bufferSize=1024",
+        "channelsOut=2",
+        "telemetryIntervalMs=50",
+        "autostartAudio=0",
+        "noAudio=0",
+        "startupTransport=0",
+        "dataDir=C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749",
+        "samplesDir=C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+      ]
+    },
+    "helloArgsMap": {
+      "version": "1.2",
+      "build": "Feb 20 2026 12:17:04",
+      "pid": "46720",
+      "osc": "127.0.0.1:18447",
+      "telemetry": "127.0.0.1:18448",
+      "sampleRate": "48000",
+      "bufferSize": "1024",
+      "channelsOut": "2",
+      "telemetryIntervalMs": "50",
+      "autostartAudio": "0",
+      "noAudio": "0",
+      "startupTransport": "0",
+      "dataDir": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749",
+      "samplesDir": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+    },
+    "totalScans": 115,
+    "baselineWindow": {
+      "startedAtMs": 1771589226274,
+      "durationMs": 900,
+      "count": 15,
+      "stats": {
+        "count": 15,
+        "elapsedMs": 846,
+        "cadenceHz": 17.73049645390071,
+        "playheadSpan": 0,
+        "scanHeadSpan": 0,
+        "scanRangeSpan": 0
+      },
+      "sample": [
+        {
+          "timestampMs": 1771589226283,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226343,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226403,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226465,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226525,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226585,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226645,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226706,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226766,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226826,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226886,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589226947,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        }
+      ]
+    },
+    "transportOnWindow": {
+      "startedAtMs": 1771589229893,
+      "durationMs": 1700,
+      "count": 28,
+      "stats": {
+        "count": 28,
+        "elapsedMs": 1630,
+        "cadenceHz": 17.177914110429448,
+        "playheadSpan": 0.9597519636154175,
+        "scanHeadSpan": 0,
+        "scanRangeSpan": 0
+      },
+      "sample": [
+        {
+          "timestampMs": 1771589229913,
+          "playheadNorm": 0.7653777599334717,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589229974,
+          "playheadNorm": 0.8222223520278931,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589230034,
+          "playheadNorm": 0.8786398768424988,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589230094,
+          "playheadNorm": 0.9354202747344971,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589230155,
+          "playheadNorm": 0.9922221899032593,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589230215,
+          "playheadNorm": 0.04909038543701172,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589230275,
+          "playheadNorm": 0.10557913780212402,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589230336,
+          "playheadNorm": 0.16255569458007812,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589230396,
+          "playheadNorm": 0.21899056434631348,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589230456,
+          "playheadNorm": 0.2754281759262085,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589230516,
+          "playheadNorm": 0.33185410499572754,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589230577,
+          "playheadNorm": 0.38891005516052246,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        }
+      ]
+    },
+    "postTransportWindow": {
+      "startedAtMs": 1771589231943,
+      "durationMs": 900,
+      "count": 15,
+      "stats": {
+        "count": 15,
+        "elapsedMs": 845,
+        "cadenceHz": 17.75147928994083,
+        "playheadSpan": 0,
+        "scanHeadSpan": 0,
+        "scanRangeSpan": 0
+      },
+      "sample": [
+        {
+          "timestampMs": 1771589231964,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232024,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232085,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232145,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232205,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232266,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232326,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232387,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232448,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232509,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232569,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        },
+        {
+          "timestampMs": 1771589232629,
+          "playheadNorm": 0.7400000095367432,
+          "scanHeadNorm": 0.7400000095367432,
+          "scanRangeNorm": 0.8100000023841858
+        }
+      ]
+    }
+  },
+  "matrix": {
+    "coreParams": [
+      {
+        "label": "GrainRate",
+        "address": "/GrainRate",
+        "sentValues": [
+          2.5,
+          88
+        ]
+      },
+      {
+        "label": "GrainDuration",
+        "address": "/GrainDuration",
+        "sentValues": [
+          30,
+          640
+        ]
+      },
+      {
+        "label": "ScanSpeed",
+        "address": "/ScanSpeed",
+        "sentValues": [
+          -1.2,
+          1.6
+        ]
+      },
+      {
+        "label": "Asynchronicity",
+        "address": "/Asynchronicity",
+        "sentValues": [
+          0.18,
+          0.82
+        ]
+      },
+      {
+        "label": "Intermittency",
+        "address": "/Intermittency",
+        "sentValues": [
+          0.22,
+          0.91
+        ]
+      },
+      {
+        "label": "PlaybackRate",
+        "address": "/PlaybackRate",
+        "sentValues": [
+          -0.75,
+          1.35
+        ]
+      },
+      {
+        "label": "ScanBegin",
+        "address": "/ScanBegin",
+        "sentValues": [
+          0.08,
+          0.74
+        ]
+      },
+      {
+        "label": "ScanRange",
+        "address": "/ScanRange",
+        "sentValues": [
+          -0.45,
+          0.62
+        ]
+      }
+    ],
+    "commandsSent": [
+      {
+        "timestampMs": 1771589227176,
+        "note": "core:GrainRate",
+        "address": "/GrainRate",
+        "args": [
+          {
+            "type": "f",
+            "value": 2.5
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589227297,
+        "note": "core:GrainRate",
+        "address": "/GrainRate",
+        "args": [
+          {
+            "type": "f",
+            "value": 88
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589227417,
+        "note": "core:GrainDuration",
+        "address": "/GrainDuration",
+        "args": [
+          {
+            "type": "f",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589227538,
+        "note": "core:GrainDuration",
+        "address": "/GrainDuration",
+        "args": [
+          {
+            "type": "f",
+            "value": 640
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589227658,
+        "note": "core:ScanSpeed",
+        "address": "/ScanSpeed",
+        "args": [
+          {
+            "type": "f",
+            "value": -1.2
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589227780,
+        "note": "core:ScanSpeed",
+        "address": "/ScanSpeed",
+        "args": [
+          {
+            "type": "f",
+            "value": 1.6
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589227902,
+        "note": "core:Asynchronicity",
+        "address": "/Asynchronicity",
+        "args": [
+          {
+            "type": "f",
+            "value": 0.18
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589228022,
+        "note": "core:Asynchronicity",
+        "address": "/Asynchronicity",
+        "args": [
+          {
+            "type": "f",
+            "value": 0.82
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589228142,
+        "note": "core:Intermittency",
+        "address": "/Intermittency",
+        "args": [
+          {
+            "type": "f",
+            "value": 0.22
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589228264,
+        "note": "core:Intermittency",
+        "address": "/Intermittency",
+        "args": [
+          {
+            "type": "f",
+            "value": 0.91
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589228385,
+        "note": "core:PlaybackRate",
+        "address": "/PlaybackRate",
+        "args": [
+          {
+            "type": "f",
+            "value": -0.75
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589228505,
+        "note": "core:PlaybackRate",
+        "address": "/PlaybackRate",
+        "args": [
+          {
+            "type": "f",
+            "value": 1.35
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589228626,
+        "note": "core:ScanBegin",
+        "address": "/ScanBegin",
+        "args": [
+          {
+            "type": "f",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589228746,
+        "note": "core:ScanBegin",
+        "address": "/ScanBegin",
+        "args": [
+          {
+            "type": "f",
+            "value": 0.74
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589228868,
+        "note": "core:ScanRange",
+        "address": "/ScanRange",
+        "args": [
+          {
+            "type": "f",
+            "value": -0.45
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589228988,
+        "note": "core:ScanRange",
+        "address": "/ScanRange",
+        "args": [
+          {
+            "type": "f",
+            "value": 0.62
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589229109,
+        "note": "bridge:loadSoundFile",
+        "address": "/loadSoundFile",
+        "args": [
+          {
+            "type": "s",
+            "value": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples\\440sine48k.wav"
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589229261,
+        "note": "bridge:soundFile",
+        "address": "/SoundFile",
+        "args": [
+          {
+            "type": "f",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589229383,
+        "note": "bridge:outputFolder",
+        "address": "/outputFolder",
+        "args": [
+          {
+            "type": "s",
+            "value": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749\\records"
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589229463,
+        "note": "bridge:fileName",
+        "address": "/fileName",
+        "args": [
+          {
+            "type": "s",
+            "value": "b2_matrix_take.wav"
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589229543,
+        "note": "bridge:recordStart",
+        "address": "/record",
+        "args": [
+          {
+            "type": "i",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589229893,
+        "note": "bridge:transportOn",
+        "address": "/transport",
+        "args": [
+          {
+            "type": "i",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589231593,
+        "note": "bridge:transportOff",
+        "address": "/transport",
+        "args": [
+          {
+            "type": "i",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "timestampMs": 1771589231943,
+        "note": "bridge:recordStop",
+        "address": "/record",
+        "args": [
+          {
+            "type": "i",
+            "value": 0
+          }
+        ]
+      }
+    ],
+    "observations": {
+      "firstTelemetryAfterTransportMs": 20,
+      "baselineCadenceHz": 17.73049645390071,
+      "transportCadenceHz": 17.177914110429448,
+      "postTransportCadenceHz": 17.75147928994083,
+      "transportPlayheadSpan": 0.9597519636154175,
+      "postTransportPlayheadSpan": 0
+    }
+  },
+  "bridgeControls": {
+    "loadSoundFilePath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples\\440sine48k.wav",
+    "soundFileIndex": 1,
+    "outputFolder": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749\\records",
+    "recordFileName": "b2_matrix_take.wav",
+    "recordFilePath": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749\\records\\b2_matrix_take.wav",
+    "recordFileSizeBytes": 462924
+  },
+  "assertions": {
+    "helloObserved": true,
+    "scansObserved": true,
+    "coreParamCommandsDispatched": true,
+    "coreParamLogsObserved": true,
+    "coreParamLogChecks": [
+      {
+        "label": "GrainRate",
+        "marker": "[ec2_headless] param GrainRate",
+        "observed": true
+      },
+      {
+        "label": "GrainDuration",
+        "marker": "[ec2_headless] param GrainDuration",
+        "observed": true
+      },
+      {
+        "label": "ScanSpeed",
+        "marker": "[ec2_headless] param ScanSpeed",
+        "observed": true
+      },
+      {
+        "label": "Asynchronicity",
+        "marker": "[ec2_headless] param Asynchronicity",
+        "observed": true
+      },
+      {
+        "label": "Intermittency",
+        "marker": "[ec2_headless] param Intermittency",
+        "observed": true
+      },
+      {
+        "label": "PlaybackRate",
+        "marker": "[ec2_headless] param PlaybackRate",
+        "observed": true
+      },
+      {
+        "label": "ScanBegin",
+        "marker": "[ec2_headless] param ScanBegin",
+        "observed": true
+      },
+      {
+        "label": "ScanRange",
+        "marker": "[ec2_headless] param ScanRange",
+        "observed": true
+      }
+    ],
+    "loadObserved": true,
+    "soundFileObserved": true,
+    "outputFolderObserved": true,
+    "fileNameObserved": true,
+    "recordStartObserved": true,
+    "recordStopObserved": true,
+    "transportOnObserved": true,
+    "transportOffObserved": true,
+    "transportMovementDetected": true,
+    "recordFileCreated": true,
+    "processAliveAfterSequence": true
+  },
+  "process": {
+    "pid": 46720,
+    "exitCode": null,
+    "signal": "SIGTERM",
+    "forcedKill": false
+  },
+  "logs": {
+    "stdoutTail": [
+      {
+        "timestampMs": 1771589225921,
+        "channel": "stdout",
+        "line": "[ec2_headless] version 1.2"
+      },
+      {
+        "timestampMs": 1771589225921,
+        "channel": "stdout",
+        "line": "[ec2_headless] pid 46720"
+      },
+      {
+        "timestampMs": 1771589225921,
+        "channel": "stdout",
+        "line": "[ec2_headless] osc 127.0.0.1:18447"
+      },
+      {
+        "timestampMs": 1771589225921,
+        "channel": "stdout",
+        "line": "[ec2_headless] telemetry 127.0.0.1:18448"
+      },
+      {
+        "timestampMs": 1771589225921,
+        "channel": "stdout",
+        "line": "[ec2_headless] telemetryIntervalMs 50"
+      },
+      {
+        "timestampMs": 1771589225921,
+        "channel": "stdout",
+        "line": "[ec2_headless] dataDir C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749"
+      },
+      {
+        "timestampMs": 1771589225921,
+        "channel": "stdout",
+        "line": "[ec2_headless] samplesDir C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+      },
+      {
+        "timestampMs": 1771589225921,
+        "channel": "stdout",
+        "line": "[ec2_headless] autostartAudio 0"
+      },
+      {
+        "timestampMs": 1771589225921,
+        "channel": "stdout",
+        "line": "[ec2_headless] noAudio 0"
+      },
+      {
+        "timestampMs": 1771589225922,
+        "channel": "stdout",
+        "line": "[ec2_headless] sent /ec2/hello to 127.0.0.1:18448"
+      },
+      {
+        "timestampMs": 1771589225922,
+        "channel": "stdout",
+        "line": "[ec2_headless] sending /ec2/telemetry/scan every 50ms"
+      },
+      {
+        "timestampMs": 1771589225922,
+        "channel": "stdout",
+        "line": "[ec2_headless] soundFile index 1 path C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples\\440sine48k.wav frames 48010 (startup default)"
+      },
+      {
+        "timestampMs": 1771589227177,
+        "channel": "stdout",
+        "line": "[ec2_headless] param GrainRate raw 0.024024 norm 0.024024"
+      },
+      {
+        "timestampMs": 1771589227297,
+        "channel": "stdout",
+        "line": "[ec2_headless] param GrainRate raw 0.87988 norm 0.87988"
+      },
+      {
+        "timestampMs": 1771589227418,
+        "channel": "stdout",
+        "line": "[ec2_headless] param GrainDuration raw 0.0299554 norm 0.0299554"
+      },
+      {
+        "timestampMs": 1771589227538,
+        "channel": "stdout",
+        "line": "[ec2_headless] param GrainDuration raw 0.639983 norm 0.639983"
+      },
+      {
+        "timestampMs": 1771589227659,
+        "channel": "stdout",
+        "line": "[ec2_headless] param ScanSpeed raw 0.2 norm 0.2"
+      },
+      {
+        "timestampMs": 1771589227780,
+        "channel": "stdout",
+        "line": "[ec2_headless] param ScanSpeed raw 0.9 norm 0.9"
+      },
+      {
+        "timestampMs": 1771589227902,
+        "channel": "stdout",
+        "line": "[ec2_headless] param Asynchronicity raw 0.18 norm 0.18"
+      },
+      {
+        "timestampMs": 1771589228022,
+        "channel": "stdout",
+        "line": "[ec2_headless] param Asynchronicity raw 0.82 norm 0.82"
+      },
+      {
+        "timestampMs": 1771589228143,
+        "channel": "stdout",
+        "line": "[ec2_headless] param Intermittency raw 0.22 norm 0.22"
+      },
+      {
+        "timestampMs": 1771589228264,
+        "channel": "stdout",
+        "line": "[ec2_headless] param Intermittency raw 0.91 norm 0.91"
+      },
+      {
+        "timestampMs": 1771589228385,
+        "channel": "stdout",
+        "line": "[ec2_headless] param PlaybackRate raw 0.3125 norm 0.3125"
+      },
+      {
+        "timestampMs": 1771589228506,
+        "channel": "stdout",
+        "line": "[ec2_headless] param PlaybackRate raw 0.8375 norm 0.8375"
+      },
+      {
+        "timestampMs": 1771589228626,
+        "channel": "stdout",
+        "line": "[ec2_headless] param ScanBegin raw 0.08 norm 0.08"
+      },
+      {
+        "timestampMs": 1771589228746,
+        "channel": "stdout",
+        "line": "[ec2_headless] param ScanBegin raw 0.74 norm 0.74"
+      },
+      {
+        "timestampMs": 1771589228868,
+        "channel": "stdout",
+        "line": "[ec2_headless] param ScanRange raw 0.275 norm 0.275"
+      },
+      {
+        "timestampMs": 1771589228989,
+        "channel": "stdout",
+        "line": "[ec2_headless] param ScanRange raw 0.81 norm 0.81"
+      },
+      {
+        "timestampMs": 1771589229109,
+        "channel": "stdout",
+        "line": "[ec2_headless] loadSoundFile path C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples\\440sine48k.wav index 1 frames 48010"
+      },
+      {
+        "timestampMs": 1771589229261,
+        "channel": "stdout",
+        "line": "[ec2_headless] soundFile index 1 path C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples\\440sine48k.wav frames 48010"
+      },
+      {
+        "timestampMs": 1771589229383,
+        "channel": "stdout",
+        "line": "[ec2_headless] record outputFolder C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749\\records"
+      },
+      {
+        "timestampMs": 1771589229463,
+        "channel": "stdout",
+        "line": "[ec2_headless] record fileName b2_matrix_take.wav"
+      },
+      {
+        "timestampMs": 1771589229544,
+        "channel": "stdout",
+        "line": "[ec2_headless] record 1 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749\\records\\b2_matrix_take.wav"
+      },
+      {
+        "timestampMs": 1771589229893,
+        "channel": "stdout",
+        "line": "[ec2_headless] transport 1"
+      },
+      {
+        "timestampMs": 1771589231593,
+        "channel": "stdout",
+        "line": "[ec2_headless] transport 0"
+      },
+      {
+        "timestampMs": 1771589231944,
+        "channel": "stdout",
+        "line": "[ec2_headless] record 0 path C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-b2-matrix-1771589225900-749\\records\\b2_matrix_take.wav frames 115720 reason osc"
+      }
+    ],
+    "stderrTail": []
+  },
+  "errors": []
+}

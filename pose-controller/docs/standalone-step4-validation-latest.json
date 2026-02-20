@@ -1,0 +1,516 @@
+{
+  "validation": "step4",
+  "checklistItems": [
+    "E3"
+  ],
+  "startedAt": "2026-02-20T10:32:51.510Z",
+  "settings": {
+    "autoStart": false,
+    "autoStartAudio": false,
+    "noAudio": false,
+    "timeoutMs": 20000,
+    "pollIntervalMs": 150,
+    "watchdogAutoRestart": true,
+    "watchdogRestartBaseDelayMs": 1000,
+    "watchdogRestartMaxDelayMs": 30000,
+    "watchdogRestartMaxAttempts": 5
+  },
+  "preflight": {
+    "setProtocol": {
+      "ok": true,
+      "snapshot": {
+        "timestampMs": 1771583571617,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine unavailable",
+        "engineFeedbackText": "",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": []
+      }
+    },
+    "setManaged": {
+      "ok": true,
+      "snapshot": {
+        "timestampMs": 1771583571646,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine unavailable",
+        "engineFeedbackText": "",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": []
+      }
+    },
+    "snapshot": {
+      "timestampMs": 1771583571659,
+      "protocolValue": "osc",
+      "managedChecked": true,
+      "startupAutoTransportChecked": false,
+      "hostValue": "127.0.0.1",
+      "hostDisabled": true,
+      "portValue": "16447",
+      "portDisabled": true,
+      "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+      "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+      "bridgeMode": "Standalone Local",
+      "engineStatusText": "Engine stopped",
+      "engineFeedbackText": "",
+      "audioBridgeFeedbackText": "",
+      "recordFileNameValue": "take.wav",
+      "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+      "startupAuditTrail": []
+    }
+  },
+  "e3": {
+    "ok": true,
+    "checks": {
+      "helloReceivedBeforeKill": true,
+      "unexpectedExitLogObserved": true,
+      "restartScheduledLogObserved": true,
+      "restartExecutionLogObserved": true,
+      "watchdogTriggeredStartLogObserved": true,
+      "uiErrorStateObserved": true,
+      "restartRecoveredRunning": true,
+      "restartAttemptCounterIncremented": true,
+      "restartedPidPresent": true,
+      "restartLatencyWithinWindow": true
+    },
+    "metrics": {
+      "killPid": 42464,
+      "restartPid": 10860,
+      "pidChanged": true,
+      "restartLatencyMs": 1096,
+      "restartObservationTimeoutMs": 43000,
+      "restartAttemptsAtRecovery": 1
+    },
+    "startResult": {
+      "command": "start",
+      "expectedStatus": "running",
+      "ok": true,
+      "startedAt": "2026-02-20T10:32:51.668Z",
+      "completedAt": "2026-02-20T10:32:51.764Z",
+      "statusAfter": {
+        "ok": true,
+        "status": "running",
+        "pid": 42464,
+        "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\win32\\ec2_headless.exe",
+        "args": [
+          "--osc-host",
+          "127.0.0.1",
+          "--osc-port",
+          "16447",
+          "--telemetry-host",
+          "127.0.0.1",
+          "--telemetry-port",
+          "16448",
+          "--data-dir",
+          "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+          "--samples-dir",
+          "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+        ],
+        "startedAtMs": 1771583571681,
+        "autoStartEnabled": false,
+        "autoRestartEnabled": true,
+        "restartAttempts": 0,
+        "restartMaxAttempts": 5
+      },
+      "snapshotAfter": {
+        "timestampMs": 1771583571763,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine running (PID 42464)",
+        "engineFeedbackText": "Engine start command accepted (starting).",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": [
+          "[11:32:51] STARTUP: engine_start_requested",
+          "[11:32:51] STARTUP: engine_running pid=42464"
+        ]
+      }
+    },
+    "initialStatus": {
+      "ok": true,
+      "status": "running",
+      "pid": 42464,
+      "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\win32\\ec2_headless.exe",
+      "args": [
+        "--osc-host",
+        "127.0.0.1",
+        "--osc-port",
+        "16447",
+        "--telemetry-host",
+        "127.0.0.1",
+        "--telemetry-port",
+        "16448",
+        "--data-dir",
+        "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+        "--samples-dir",
+        "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+      ],
+      "startedAtMs": 1771583571681,
+      "autoStartEnabled": false,
+      "autoRestartEnabled": true,
+      "restartAttempts": 0,
+      "restartMaxAttempts": 5
+    },
+    "hello": {
+      "source": "electron",
+      "timestampMs": 1771583571696,
+      "address": "/ec2/hello",
+      "args": [
+        "version=1.2",
+        "build=Feb 19 2026 19:14:34",
+        "pid=42464",
+        "osc=127.0.0.1:16447",
+        "telemetry=127.0.0.1:16448",
+        "sampleRate=48000",
+        "bufferSize=1024",
+        "channelsOut=2",
+        "telemetryIntervalMs=50",
+        "autostartAudio=0",
+        "noAudio=0",
+        "startupTransport=0",
+        "dataDir=C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+        "samplesDir=C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+      ]
+    },
+    "killAction": {
+      "ok": true,
+      "reason": "step4_watchdog_forced_exit",
+      "signal": "SIGKILL",
+      "pid": 42464,
+      "atMs": 1771583571787
+    },
+    "errorObservation": {
+      "observedAtMs": 1771583571911,
+      "status": {
+        "ok": true,
+        "status": "error",
+        "pid": null,
+        "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\win32\\ec2_headless.exe",
+        "args": [
+          "--osc-host",
+          "127.0.0.1",
+          "--osc-port",
+          "16447",
+          "--telemetry-host",
+          "127.0.0.1",
+          "--telemetry-port",
+          "16448",
+          "--data-dir",
+          "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+          "--samples-dir",
+          "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+        ],
+        "startedAtMs": 1771583571681,
+        "stoppedAtMs": 1771583571788,
+        "autoStartEnabled": false,
+        "autoRestartEnabled": true,
+        "restartAttempts": 1,
+        "restartMaxAttempts": 5,
+        "lastError": "Engine exited unexpectedly (code=null, signal=SIGKILL)"
+      },
+      "snapshot": {
+        "timestampMs": 1771583571911,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine error",
+        "engineFeedbackText": "Engine start command accepted (starting).",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": [
+          "[11:32:51] STARTUP: engine_start_requested",
+          "[11:32:51] STARTUP: engine_running pid=42464",
+          "[11:32:51] STARTUP: startup_sync_applied transport=none",
+          "[11:32:51] STARTUP: hello_received address=/ec2/hello",
+          "[11:32:51] STARTUP: startup_ready"
+        ]
+      }
+    },
+    "restartObservation": {
+      "observedAtMs": 1771583572883,
+      "status": {
+        "ok": true,
+        "status": "running",
+        "pid": 10860,
+        "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\win32\\ec2_headless.exe",
+        "args": [
+          "--osc-host",
+          "127.0.0.1",
+          "--osc-port",
+          "16447",
+          "--telemetry-host",
+          "127.0.0.1",
+          "--telemetry-port",
+          "16448",
+          "--data-dir",
+          "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+          "--samples-dir",
+          "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+        ],
+        "startedAtMs": 1771583572793,
+        "autoStartEnabled": false,
+        "autoRestartEnabled": true,
+        "restartAttempts": 1,
+        "restartMaxAttempts": 5
+      },
+      "snapshot": {
+        "timestampMs": 1771583572883,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine running (PID 10860)",
+        "engineFeedbackText": "Engine start command accepted (starting).",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": [
+          "[11:32:51] STARTUP: engine_start_requested",
+          "[11:32:51] STARTUP: engine_running pid=42464",
+          "[11:32:51] STARTUP: startup_sync_applied transport=none",
+          "[11:32:51] STARTUP: hello_received address=/ec2/hello",
+          "[11:32:51] STARTUP: startup_ready"
+        ]
+      }
+    },
+    "logsTail": [
+      {
+        "timestampMs": 1771583571681,
+        "source": "system",
+        "line": "Engine started (pid=42464) using C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\win32\\ec2_headless.exe (trigger=manual)"
+      },
+      {
+        "timestampMs": 1771583571681,
+        "source": "system",
+        "line": "Engine data dir: C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2"
+      },
+      {
+        "timestampMs": 1771583571681,
+        "source": "system",
+        "line": "Engine samples dir: C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+      },
+      {
+        "timestampMs": 1771583571681,
+        "source": "system",
+        "line": "Engine runtime libs dir: C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\libs"
+      },
+      {
+        "timestampMs": 1771583571696,
+        "source": "stdout",
+        "line": "[ec2_headless] version 1.2"
+      },
+      {
+        "timestampMs": 1771583571696,
+        "source": "stdout",
+        "line": "[ec2_headless] pid 42464"
+      },
+      {
+        "timestampMs": 1771583571696,
+        "source": "stdout",
+        "line": "[ec2_headless] osc 127.0.0.1:16447"
+      },
+      {
+        "timestampMs": 1771583571696,
+        "source": "stdout",
+        "line": "[ec2_headless] telemetry 127.0.0.1:16448"
+      },
+      {
+        "timestampMs": 1771583571696,
+        "source": "stdout",
+        "line": "[ec2_headless] telemetryIntervalMs 50"
+      },
+      {
+        "timestampMs": 1771583571696,
+        "source": "stdout",
+        "line": "[ec2_headless] dataDir C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2"
+      },
+      {
+        "timestampMs": 1771583571696,
+        "source": "stdout",
+        "line": "[ec2_headless] samplesDir C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+      },
+      {
+        "timestampMs": 1771583571696,
+        "source": "stdout",
+        "line": "[ec2_headless] autostartAudio 0"
+      },
+      {
+        "timestampMs": 1771583571696,
+        "source": "stdout",
+        "line": "[ec2_headless] noAudio 0"
+      },
+      {
+        "timestampMs": 1771583571697,
+        "source": "stdout",
+        "line": "[ec2_headless] sent /ec2/hello to 127.0.0.1:16448"
+      },
+      {
+        "timestampMs": 1771583571697,
+        "source": "stdout",
+        "line": "[ec2_headless] sending /ec2/telemetry/scan every 50ms"
+      },
+      {
+        "timestampMs": 1771583571764,
+        "source": "stdout",
+        "line": "[ec2_headless] record fileName take.wav"
+      },
+      {
+        "timestampMs": 1771583571764,
+        "source": "stdout",
+        "line": "[ec2_headless] record outputFolder C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869"
+      },
+      {
+        "timestampMs": 1771583571787,
+        "source": "system",
+        "line": "Validation forcing unexpected engine exit (reason=step4_watchdog_forced_exit, pid=42464)"
+      },
+      {
+        "timestampMs": 1771583571788,
+        "source": "system",
+        "line": "Engine exited (code=null, signal=SIGKILL, expected=false)"
+      },
+      {
+        "timestampMs": 1771583571788,
+        "source": "system",
+        "line": "Scheduling engine restart attempt 1/5 in 1000ms (Engine exited unexpectedly (code=null, signal=SIGKILL))"
+      },
+      {
+        "timestampMs": 1771583572789,
+        "source": "system",
+        "line": "Executing engine restart attempt 1/5."
+      },
+      {
+        "timestampMs": 1771583572793,
+        "source": "system",
+        "line": "Engine started (pid=10860) using C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-bin\\win32\\ec2_headless.exe (trigger=watchdog)"
+      },
+      {
+        "timestampMs": 1771583572793,
+        "source": "system",
+        "line": "Engine data dir: C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2"
+      },
+      {
+        "timestampMs": 1771583572793,
+        "source": "system",
+        "line": "Engine samples dir: C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+      },
+      {
+        "timestampMs": 1771583572793,
+        "source": "system",
+        "line": "Engine runtime libs dir: C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\libs"
+      },
+      {
+        "timestampMs": 1771583572804,
+        "source": "stdout",
+        "line": "[ec2_headless] version 1.2"
+      },
+      {
+        "timestampMs": 1771583572804,
+        "source": "stdout",
+        "line": "[ec2_headless] pid 10860"
+      },
+      {
+        "timestampMs": 1771583572804,
+        "source": "stdout",
+        "line": "[ec2_headless] osc 127.0.0.1:16447"
+      },
+      {
+        "timestampMs": 1771583572804,
+        "source": "stdout",
+        "line": "[ec2_headless] telemetry 127.0.0.1:16448"
+      },
+      {
+        "timestampMs": 1771583572804,
+        "source": "stdout",
+        "line": "[ec2_headless] telemetryIntervalMs 50"
+      },
+      {
+        "timestampMs": 1771583572804,
+        "source": "stdout",
+        "line": "[ec2_headless] dataDir C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2"
+      },
+      {
+        "timestampMs": 1771583572804,
+        "source": "stdout",
+        "line": "[ec2_headless] samplesDir C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\engine-resources\\samples"
+      },
+      {
+        "timestampMs": 1771583572804,
+        "source": "stdout",
+        "line": "[ec2_headless] autostartAudio 0"
+      },
+      {
+        "timestampMs": 1771583572804,
+        "source": "stdout",
+        "line": "[ec2_headless] noAudio 0"
+      },
+      {
+        "timestampMs": 1771583572805,
+        "source": "stdout",
+        "line": "[ec2_headless] sent /ec2/hello to 127.0.0.1:16448"
+      },
+      {
+        "timestampMs": 1771583572805,
+        "source": "stdout",
+        "line": "[ec2_headless] sending /ec2/telemetry/scan every 50ms"
+      },
+      {
+        "timestampMs": 1771583572861,
+        "source": "stdout",
+        "line": "[ec2_headless] record fileName take.wav"
+      },
+      {
+        "timestampMs": 1771583572861,
+        "source": "stdout",
+        "line": "[ec2_headless] record outputFolder C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869"
+      }
+    ],
+    "errors": []
+  },
+  "pass": true,
+  "completedAt": "2026-02-20T10:32:52.948Z"
+}

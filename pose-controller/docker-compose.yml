@@ -10,12 +10,24 @@
       BRIDGE_PORT: 8787
       OSC_TARGET_HOST: ${OSC_TARGET_HOST:-host.docker.internal}
       OSC_TARGET_PORT: ${OSC_TARGET_PORT:-16447}
+      TELEMETRY_LISTEN_HOST: ${TELEMETRY_LISTEN_HOST:-0.0.0.0}
+      TELEMETRY_LISTEN_PORT: ${TELEMETRY_LISTEN_PORT:-16448}
+      TELEMETRY_SCAN_ADDRESS: ${TELEMETRY_SCAN_ADDRESS:-/ec2/telemetry/scan}
       OSC_CHANNEL_PREFIX: ${OSC_CHANNEL_PREFIX:-/pose/out}
       CHANNEL_COUNT: ${CHANNEL_COUNT:-16}
       MAX_MESSAGES_PER_SECOND: ${MAX_MESSAGES_PER_SECOND:-60}
+      OSC_ACTIVITY_LOG_INTERVAL_MS: ${OSC_ACTIVITY_LOG_INTERVAL_MS:-1000}
       ALLOWED_ORIGIN: ${ALLOWED_ORIGIN:-*}
+      UV_THREADPOOL_SIZE: ${UV_THREADPOOL_SIZE:-4}
+      OMP_NUM_THREADS: ${OMP_NUM_THREADS:-1}
+      OPENBLAS_NUM_THREADS: ${OPENBLAS_NUM_THREADS:-1}
+      MKL_NUM_THREADS: ${MKL_NUM_THREADS:-1}
+      NUMEXPR_NUM_THREADS: ${NUMEXPR_NUM_THREADS:-1}
     ports:
       - "${BRIDGE_PORT:-8787}:8787"
+      - "${TELEMETRY_LISTEN_PORT:-16448}:${TELEMETRY_LISTEN_PORT:-16448}/udp"
+    cpus: "${BRIDGE_CPU_LIMIT:-8.0}"
+    mem_limit: ${BRIDGE_MEM_LIMIT:-8g}
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8787/health"]
@@ -29,9 +41,15 @@
     build:
       context: .
       dockerfile: Dockerfile.frontend
+      args:
+        VITE_POSE_DELEGATE: ${VITE_POSE_DELEGATE:-GPU}
+        VITE_POSE_INFERENCE_FPS: ${VITE_POSE_INFERENCE_FPS:-30}
+        VITE_POSE_NEW_FRAME_ONLY: ${VITE_POSE_NEW_FRAME_ONLY:-true}
     container_name: granupose-frontend
     ports:
-      - "${WEB_PORT:-8080}:8080"
+      - "8081:8080"
+    cpus: "${FRONTEND_CPU_LIMIT:-1.0}"
+    mem_limit: ${FRONTEND_MEM_LIMIT:-512m}
     depends_on:
       bridge:
         condition: service_healthy
@@ -53,9 +71,21 @@
       BRIDGE_PORT: 8787
       OSC_TARGET_HOST: ${OSC_TARGET_HOST:-host.docker.internal}
       OSC_TARGET_PORT: ${OSC_TARGET_PORT:-16447}
+      TELEMETRY_LISTEN_HOST: ${TELEMETRY_LISTEN_HOST:-0.0.0.0}
+      TELEMETRY_LISTEN_PORT: ${TELEMETRY_LISTEN_PORT:-16448}
+      TELEMETRY_SCAN_ADDRESS: ${TELEMETRY_SCAN_ADDRESS:-/ec2/telemetry/scan}
+      OSC_ACTIVITY_LOG_INTERVAL_MS: ${OSC_ACTIVITY_LOG_INTERVAL_MS:-1000}
       ALLOWED_ORIGIN: ${ALLOWED_ORIGIN:-*}
+      UV_THREADPOOL_SIZE: ${UV_THREADPOOL_SIZE:-4}
+      OMP_NUM_THREADS: ${OMP_NUM_THREADS:-1}
+      OPENBLAS_NUM_THREADS: ${OPENBLAS_NUM_THREADS:-1}
+      MKL_NUM_THREADS: ${MKL_NUM_THREADS:-1}
+      NUMEXPR_NUM_THREADS: ${NUMEXPR_NUM_THREADS:-1}
     ports:
       - "8787:8787"
+      - "${TELEMETRY_LISTEN_PORT:-16448}:${TELEMETRY_LISTEN_PORT:-16448}/udp"
+    cpus: "${BRIDGE_DEV_CPU_LIMIT:-8.0}"
+    mem_limit: ${BRIDGE_DEV_MEM_LIMIT:-8g}
     volumes:
       - .:/workspace
 
@@ -67,8 +97,13 @@
     environment:
       VITE_OUTPUT_MODE: bridge
       VITE_BRIDGE_WS_URL: ws://localhost:8787/ws
+      VITE_POSE_DELEGATE: ${VITE_POSE_DELEGATE:-GPU}
+      VITE_POSE_INFERENCE_FPS: ${VITE_POSE_INFERENCE_FPS:-30}
+      VITE_POSE_NEW_FRAME_ONLY: ${VITE_POSE_NEW_FRAME_ONLY:-true}
     ports:
       - "5173:5173"
+    cpus: "${FRONTEND_DEV_CPU_LIMIT:-4.0}"
+    mem_limit: ${FRONTEND_DEV_MEM_LIMIT:-4g}
     depends_on:
       bridge-dev:
         condition: service_started

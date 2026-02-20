@@ -1,0 +1,397 @@
+{
+  "generatedAt": "2026-02-20T12:06:28.391Z",
+  "pass": true,
+  "config": {
+    "appPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\release-artifacts\\win-unpacked\\GranuPose.exe",
+    "oscHost": "127.0.0.1",
+    "oscPort": 19447,
+    "telemetryHost": "127.0.0.1",
+    "telemetryPort": 19448,
+    "timeoutMs": 30000,
+    "noAudio": false,
+    "autostartAudio": false,
+    "keepTemp": false,
+    "outputPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\docs\\packaged-clean-smoke-latest.json"
+  },
+  "runtime": {
+    "cleanProfileRoot": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-packaged-smoke-1771589188397-4187",
+    "engineDataDir": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-packaged-smoke-1771589188397-4187\\engine-data",
+    "staticWavPath": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\release-artifacts\\win-unpacked\\resources\\ec2\\samples\\440sine48k.wav"
+  },
+  "telemetry": {
+    "hello": {
+      "timestampMs": 1771589188788,
+      "address": "/ec2/hello",
+      "args": [
+        "version=1.2",
+        "build=Feb 20 2026 12:17:04",
+        "pid=52276",
+        "osc=127.0.0.1:19447",
+        "telemetry=127.0.0.1:19448",
+        "sampleRate=48000",
+        "bufferSize=1024",
+        "channelsOut=2",
+        "telemetryIntervalMs=50",
+        "autostartAudio=0",
+        "noAudio=0",
+        "startupTransport=0",
+        "dataDir=C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-packaged-smoke-1771589188397-4187\\engine-data",
+        "samplesDir=C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\release-artifacts\\win-unpacked\\resources\\ec2\\samples"
+      ]
+    },
+    "helloArgsMap": {
+      "version": "1.2",
+      "build": "Feb 20 2026 12:17:04",
+      "pid": "52276",
+      "osc": "127.0.0.1:19447",
+      "telemetry": "127.0.0.1:19448",
+      "sampleRate": "48000",
+      "bufferSize": "1024",
+      "channelsOut": "2",
+      "telemetryIntervalMs": "50",
+      "autostartAudio": "0",
+      "noAudio": "0",
+      "startupTransport": "0",
+      "dataDir": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-packaged-smoke-1771589188397-4187\\engine-data",
+      "samplesDir": "C:\\Users\\Milan\\Documents\\GranuPose\\pose-controller\\release-artifacts\\win-unpacked\\resources\\ec2\\samples"
+    },
+    "totalScans": 71,
+    "baselineWindow": {
+      "startedAtMs": 1771589189094,
+      "durationMs": 900,
+      "count": 15,
+      "stats": {
+        "count": 15,
+        "elapsedMs": 845,
+        "cadenceHz": 17.75147928994083,
+        "playheadSpan": 0,
+        "scanHeadSpan": 0,
+        "scanRangeSpan": 0
+      },
+      "sample": [
+        {
+          "timestampMs": 1771589189149,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189209,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189269,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189329,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189389,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189449,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189509,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189569,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189629,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189690,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189750,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589189810,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        }
+      ]
+    },
+    "transportOnWindow": {
+      "startedAtMs": 1771589190346,
+      "durationMs": 1800,
+      "count": 30,
+      "stats": {
+        "count": 30,
+        "elapsedMs": 1751,
+        "cadenceHz": 17.133066818960597,
+        "playheadSpan": 0.23754476429894567,
+        "scanHeadSpan": 0,
+        "scanRangeSpan": 0
+      },
+      "sample": [
+        {
+          "timestampMs": 1771589190347,
+          "playheadNorm": 0.004269759636372328,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589190407,
+          "playheadNorm": 0.017403356730937958,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589190467,
+          "playheadNorm": 0.030572962015867233,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589190527,
+          "playheadNorm": 0.04373311623930931,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589190587,
+          "playheadNorm": 0.056876666843891144,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589190648,
+          "playheadNorm": 0.07013162225484848,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589190708,
+          "playheadNorm": 0.08330301940441132,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589190769,
+          "playheadNorm": 0.09655741602182388,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589190829,
+          "playheadNorm": 0.1096930205821991,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589190889,
+          "playheadNorm": 0.1229257732629776,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589190951,
+          "playheadNorm": 0.1363118290901184,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589191011,
+          "playheadNorm": 0.14945846796035767,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        }
+      ]
+    },
+    "postTransportWindow": {
+      "startedAtMs": 1771589192146,
+      "durationMs": 900,
+      "count": 15,
+      "stats": {
+        "count": 15,
+        "elapsedMs": 846,
+        "cadenceHz": 17.73049645390071,
+        "playheadSpan": 0,
+        "scanHeadSpan": 0,
+        "scanRangeSpan": 0
+      },
+      "sample": [
+        {
+          "timestampMs": 1771589192167,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192228,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192288,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192349,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192409,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192469,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192530,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192590,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192651,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192711,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192771,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        },
+        {
+          "timestampMs": 1771589192832,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25
+        }
+      ]
+    }
+  },
+  "commandsSent": [
+    {
+      "timestampMs": 1771589189994,
+      "note": "b1:amplitude",
+      "address": "/Amplitude",
+      "args": [
+        {
+          "type": "f",
+          "value": 0.42
+        }
+      ]
+    },
+    {
+      "timestampMs": 1771589190146,
+      "note": "b1:scanSpeed",
+      "address": "/ScanSpeed",
+      "args": [
+        {
+          "type": "f",
+          "value": 0.65
+        }
+      ]
+    },
+    {
+      "timestampMs": 1771589190346,
+      "note": "c1:transportOn",
+      "address": "/transport",
+      "args": [
+        {
+          "type": "i",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "timestampMs": 1771589192146,
+      "note": "c1:transportOff",
+      "address": "/transport",
+      "args": [
+        {
+          "type": "i",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "assertions": {
+    "helloObserved": true,
+    "a1Within5s": true,
+    "helloDelayMs": 385,
+    "scansObserved": true,
+    "amplitudeSent": true,
+    "scanSpeedSent": true,
+    "transportSent": true,
+    "transportMovementDetected": true,
+    "packagedSamplesPathResolved": true,
+    "firstTelemetryAfterTransportMs": 1,
+    "processAliveAfterCommands": true
+  },
+  "process": {
+    "pid": 50660,
+    "exitCode": null,
+    "signal": "SIGTERM",
+    "forcedKill": false
+  },
+  "logs": {
+    "stdoutTail": [
+      {
+        "timestampMs": 1771589188731,
+        "channel": "stdout",
+        "line": "[electron-telemetry] OSC listener ready on 0.0.0.0:16448"
+      }
+    ],
+    "stderrTail": []
+  },
+  "errors": []
+}

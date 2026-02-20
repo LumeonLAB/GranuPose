@@ -5,45 +5,20 @@ import {
   MAX_OUTPUT_CHANNEL_COUNT,
   type OutputChannel,
 } from './oscSchema';
+import type { Ec2ScanTelemetry, OscMessage, ScanTelemetryListener } from './bridgeOutput';
 
-export type BridgeConnectionStatus =
+export type ElectronOscConnectionStatus =
   | 'disabled'
   | 'connecting'
   | 'connected'
   | 'disconnected';
 
-type StatusListener = (status: BridgeConnectionStatus) => void;
-export type ScanTelemetryListener = (payload: Ec2ScanTelemetry) => void;
+type StatusListener = (status: ElectronOscConnectionStatus) => void;
 
-export interface Ec2ScanTelemetry {
-  source: 'bridge' | 'electron';
-  receivedAtMs: number;
-  playheadNorm: number;
-  scanHeadNorm: number;
-  scanRangeNorm: number;
-  soundFileFrames: number | null;
-  activeGrainCount: number;
-  activeGrainIndices: number[];
-  activeGrainNormPositions: number[];
-}
-
-interface BridgeOutputClientOptions {
-  wsUrl?: string;
-  reconnectMs?: number;
+interface ElectronOscOutputClientOptions {
+  targetHost?: string;
+  targetPort?: number;
   channelCount?: number;
-}
-
-export type OscArgType = 'f' | 'i' | 'd' | 's';
-
-export interface OscArg {
-  type: OscArgType;
-  value: number | string;
-}
-
-export interface OscMessage {
-  address: string;
-  args?: OscArg[];
-  rateLimitKey?: string;
 }
 
 function clamp01(value: number): number {
@@ -68,7 +43,6 @@ function parsePositiveIntOrNull(value: unknown): number | null {
   if (parsed == null) {
     return null;
   }
-
   const rounded = Math.trunc(parsed);
   if (rounded <= 0) {
     return null;
@@ -95,7 +69,7 @@ function parseNumericArray(value: unknown, maxLength: number): number[] {
   return parsed;
 }
 
-function parseBridgeTelemetryPayload(payload: unknown): Ec2ScanTelemetry | null {
+function parseElectronTelemetryPayload(payload: unknown): Ec2ScanTelemetry | null {
   if (!payload || typeof payload !== 'object') {
     return null;
   }
@@ -123,7 +97,7 @@ function parseBridgeTelemetryPayload(payload: unknown): Ec2ScanTelemetry | null 
         );
 
   return {
-    source: 'bridge',
+    source: 'electron',
     receivedAtMs: Date.now(),
     playheadNorm,
     scanHeadNorm,
@@ -135,14 +109,22 @@ function parseBridgeTelemetryPayload(payload: unknown): Ec2ScanTelemetry | null 
   };
 }
 
-function getDefaultWsUrl(): string {
-  const fromEnv = import.meta.env.VITE_BRIDGE_WS_URL;
-  if (fromEnv) {
-    return fromEnv;
+function parsePort(rawValue: unknown, fallback: number): number {
+  const parsed = Number(rawValue);
+  if (!Number.isFinite(parsed)) {
+    return fallback;
   }
 
-  const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-  return `${protocol}//${window.location.host}/ws`;
+  const rounded = Math.trunc(parsed);
+  return Math.max(1, Math.min(65535, rounded));
+}
+
+function getDefaultTargetHost(): string {
+  return import.meta.env.VITE_OSC_TARGET_HOST || '127.0.0.1';
+}
+
+function getDefaultTargetPort(): number {
+  return parsePort(import.meta.env.VITE_OSC_TARGET_PORT, 16447);
 }
 
 function getDefaultChannelCount(): number {
@@ -155,27 +137,25 @@ function getDefaultChannelCount(): number {
   return Math.max(1, Math.min(MAX_OUTPUT_CHANNEL_COUNT, rounded));
 }
 
-export class BridgeOutputClient {
-  private readonly wsUrl: string;
-  private readonly reconnectMs: number;
-  private readonly channelCount: number;
-  private socket: WebSocket | null;
-  private reconnectTimer: number | null;
-  private closed: boolean;
-  private status: BridgeConnectionStatus;
-  private readonly listeners: Set<StatusListener>;
-  private readonly telemetryListeners: Set<ScanTelemetryListener>;
+export function hasElectronOscApi(): boolean {
+  return typeof window !== 'undefined' && Boolean(window.granuPose?.osc);
+}
 
-  constructor(options: BridgeOutputClientOptions = {}) {
-    this.wsUrl = options.wsUrl || getDefaultWsUrl();
-    this.reconnectMs = options.reconnectMs ?? 2000;
+export class ElectronOscOutputClient {
+  private readonly targetHost: string;
+  private readonly targetPort: number;
+  private readonly channelCount: number;
+  private closed: boolean;
+  private status: ElectronOscConnectionStatus;
+  private readonly listeners: Set<StatusListener>;
+
+  constructor(options: ElectronOscOutputClientOptions = {}) {
+    this.targetHost = options.targetHost || getDefaultTargetHost();
+    this.targetPort = options.targetPort ?? getDefaultTargetPort();
     this.channelCount = options.channelCount ?? getDefaultChannelCount();
-    this.socket = null;
-    this.reconnectTimer = null;
     this.closed = false;
     this.status = 'disconnected';
     this.listeners = new Set();
-    this.telemetryListeners = new Set();
   }
 
   subscribeStatus(listener: StatusListener): () => void {
@@ -187,13 +167,21 @@ export class BridgeOutputClient {
   }
 
   subscribeScanTelemetry(listener: ScanTelemetryListener): () => void {
-    this.telemetryListeners.add(listener);
-    return () => {
-      this.telemetryListeners.delete(listener);
-    };
+    const telemetryApi = window.granuPose?.telemetry;
+    if (!telemetryApi) {
+      return () => {};
+    }
+
+    return telemetryApi.subscribeScan((payload) => {
+      const parsed = parseElectronTelemetryPayload(payload);
+      if (!parsed) {
+        return;
+      }
+      listener(parsed);
+    });
   }
 
-  private setStatus(nextStatus: BridgeConnectionStatus): void {
+  private setStatus(nextStatus: ElectronOscConnectionStatus): void {
     if (this.status === nextStatus) {
       return;
     }
@@ -202,81 +190,40 @@ export class BridgeOutputClient {
     this.listeners.forEach((listener) => listener(nextStatus));
   }
 
-  private emitScanTelemetry(payload: Ec2ScanTelemetry): void {
-    this.telemetryListeners.forEach((listener) => listener(payload));
-  }
-
-  private scheduleReconnect(): void {
-    if (this.closed || this.reconnectTimer !== null) {
-      return;
-    }
-
-    this.reconnectTimer = window.setTimeout(() => {
-      this.reconnectTimer = null;
-      this.connect();
-    }, this.reconnectMs);
-  }
-
-  connect(): void {
+  async connect(): Promise<void> {
     if (this.closed) {
       return;
     }
 
-    if (this.socket && this.socket.readyState === WebSocket.OPEN) {
+    const oscApi = window.granuPose?.osc;
+    if (!oscApi) {
+      this.setStatus('disabled');
       return;
     }
 
     this.setStatus('connecting');
 
     try {
-      const ws = new WebSocket(this.wsUrl);
-      this.socket = ws;
+      const result = await oscApi.configure({
+        targetHost: this.targetHost,
+        targetPort: this.targetPort,
+      });
 
-      ws.onopen = () => {
-        this.setStatus('connected');
-      };
+      if (this.closed) {
+        return;
+      }
 
-      ws.onclose = () => {
-        this.setStatus('disconnected');
-        this.scheduleReconnect();
-      };
-
-      ws.onerror = () => {
-        this.setStatus('disconnected');
-      };
-
-      ws.onmessage = (event) => {
-        let parsed: unknown;
-        try {
-          parsed = JSON.parse(String(event.data));
-        } catch {
-          return;
-        }
-
-        if (!parsed || typeof parsed !== 'object') {
-          return;
-        }
-
-        const envelope = parsed as Record<string, unknown>;
-        if (envelope.type !== 'telemetry:scan') {
-          return;
-        }
-
-        const payload = parseBridgeTelemetryPayload(envelope.payload);
-        if (!payload) {
-          return;
-        }
-
-        this.emitScanTelemetry(payload);
-      };
+      this.setStatus(result.ok ? 'connected' : 'disconnected');
     } catch {
+      if (this.closed) {
+        return;
+      }
       this.setStatus('disconnected');
-      this.scheduleReconnect();
     }
   }
 
   sendChannel(channel: number, value: number): void {
-    if (!this.socket || this.socket.readyState !== WebSocket.OPEN) {
+    if (this.closed) {
       return;
     }
 
@@ -284,19 +231,34 @@ export class BridgeOutputClient {
       return;
     }
 
-    const payload = {
-      type: 'channel:set',
-      payload: {
+    const oscApi = window.granuPose?.osc;
+    if (!oscApi) {
+      this.setStatus('disabled');
+      return;
+    }
+
+    void oscApi
+      .sendChannel({
         channel,
         value: clamp01(value),
-      },
-    };
+      })
+      .then((result) => {
+        if (this.closed) {
+          return;
+        }
 
-    this.socket.send(JSON.stringify(payload));
+        this.setStatus(result.ok ? 'connected' : 'disconnected');
+      })
+      .catch(() => {
+        if (this.closed) {
+          return;
+        }
+        this.setStatus('disconnected');
+      });
   }
 
   sendOscMessage(message: OscMessage): void {
-    if (!this.socket || this.socket.readyState !== WebSocket.OPEN) {
+    if (this.closed) {
       return;
     }
 
@@ -305,16 +267,30 @@ export class BridgeOutputClient {
       return;
     }
 
-    const payload = {
-      type: 'osc:send',
-      payload: {
+    const oscApi = window.granuPose?.osc;
+    if (!oscApi) {
+      this.setStatus('disabled');
+      return;
+    }
+
+    void oscApi
+      .sendMessage({
         address,
         args: message.args ?? [],
-        rateLimitKey: message.rateLimitKey,
-      },
-    };
+      })
+      .then((result) => {
+        if (this.closed) {
+          return;
+        }
 
-    this.socket.send(JSON.stringify(payload));
+        this.setStatus(result.ok ? 'connected' : 'disconnected');
+      })
+      .catch(() => {
+        if (this.closed) {
+          return;
+        }
+        this.setStatus('disconnected');
+      });
   }
 
   getOutputChannels(): OutputChannel[] {
@@ -323,24 +299,18 @@ export class BridgeOutputClient {
 
   close(): void {
     this.closed = true;
-
-    if (this.reconnectTimer !== null) {
-      window.clearTimeout(this.reconnectTimer);
-      this.reconnectTimer = null;
-    }
-
-    if (this.socket) {
-      this.socket.close();
-      this.socket = null;
-    }
-
     this.setStatus('disconnected');
   }
 }
 
-export function createBridgeOutputClientFromEnv(): BridgeOutputClient {
-  return new BridgeOutputClient({
-    wsUrl: import.meta.env.VITE_BRIDGE_WS_URL,
+export function createElectronOscOutputClientFromEnv(): ElectronOscOutputClient | null {
+  if (!hasElectronOscApi()) {
+    return null;
+  }
+
+  return new ElectronOscOutputClient({
+    targetHost: getDefaultTargetHost(),
+    targetPort: getDefaultTargetPort(),
     channelCount: getDefaultChannelCount(),
   });
 }

@@ -1,0 +1,5208 @@
+{
+  "validation": "step2",
+  "checklistItems": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "startedAt": "2026-02-19T18:16:09.737Z",
+  "settings": {
+    "autoStart": false,
+    "autoStartAudio": false,
+    "noAudio": false,
+    "timeoutMs": 20000,
+    "pollIntervalMs": 150
+  },
+  "preflight": {
+    "setProtocol": {
+      "ok": true,
+      "snapshot": {
+        "timestampMs": 1771524969815,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine unavailable",
+        "engineFeedbackText": "",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": []
+      }
+    },
+    "setManaged": {
+      "ok": true,
+      "snapshot": {
+        "timestampMs": 1771524969843,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine unavailable",
+        "engineFeedbackText": "",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": []
+      }
+    },
+    "setStartupAutoTransport": {
+      "ok": true,
+      "snapshot": {
+        "timestampMs": 1771524969856,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine stopped",
+        "engineFeedbackText": "",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": []
+      }
+    },
+    "snapshot": {
+      "timestampMs": 1771524969859,
+      "protocolValue": "osc",
+      "managedChecked": true,
+      "startupAutoTransportChecked": false,
+      "hostValue": "127.0.0.1",
+      "hostDisabled": true,
+      "portValue": "16447",
+      "portDisabled": true,
+      "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+      "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+      "bridgeMode": "Standalone Local",
+      "engineStatusText": "Engine stopped",
+      "engineFeedbackText": "",
+      "audioBridgeFeedbackText": "",
+      "recordFileNameValue": "take.wav",
+      "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+      "startupAuditTrail": []
+    }
+  },
+  "c1": {
+    "ok": true,
+    "checks": {
+      "engineStartSucceeded": true,
+      "startupTransportIsZeroInManualMode": true,
+      "telemetryCadencePresent": true,
+      "transportOnMovementDetected": true,
+      "transportOneLogObserved": true
+    },
+    "startResult": {
+      "command": "start",
+      "expectedStatus": "running",
+      "ok": true,
+      "startedAt": "2026-02-19T18:16:09.869Z",
+      "completedAt": "2026-02-19T18:16:09.956Z",
+      "statusAfter": {
+        "ok": true,
+        "status": "running",
+        "pid": 39624,
+        "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+        "args": [
+          "--osc-host",
+          "127.0.0.1",
+          "--osc-port",
+          "16447",
+          "--telemetry-host",
+          "127.0.0.1",
+          "--telemetry-port",
+          "16448",
+          "--data-dir",
+          "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+          "--samples-dir",
+          "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+        ],
+        "startedAtMs": 1771524969877,
+        "autoStartEnabled": false
+      },
+      "snapshotAfter": {
+        "timestampMs": 1771524969955,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine running (PID 39624)",
+        "engineFeedbackText": "Engine start command accepted (starting).",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": [
+          "[19:16:09] STARTUP: engine_start_requested",
+          "[19:16:09] STARTUP: engine_running pid=39624"
+        ]
+      }
+    },
+    "hello": {
+      "source": "electron",
+      "timestampMs": 1771524969891,
+      "address": "/ec2/hello",
+      "args": [
+        "version=1.2",
+        "build=Feb 19 2026 19:14:34",
+        "pid=39624",
+        "osc=127.0.0.1:16447",
+        "telemetry=127.0.0.1:16448",
+        "sampleRate=48000",
+        "bufferSize=1024",
+        "channelsOut=2",
+        "telemetryIntervalMs=50",
+        "autostartAudio=0",
+        "noAudio=0",
+        "startupTransport=0",
+        "dataDir=C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+        "samplesDir=C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+      ]
+    },
+    "baselineWindow": {
+      "startedAtMs": 1771524969956,
+      "completedAtMs": 1771524971458,
+      "scans": [
+        {
+          "source": "electron",
+          "timestampMs": 1771524970016,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970077,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970139,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970200,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970261,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970323,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970384,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970445,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970506,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970567,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970628,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970690,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970751,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970813,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970874,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970936,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524970997,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971058,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971120,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971182,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971243,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971305,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971367,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971429,
+          "playheadNorm": 0,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 0,
+          "activeGrainIndices": [],
+          "activeGrainNormPositions": []
+        }
+      ],
+      "stats": {
+        "count": 24,
+        "elapsedMs": 1413,
+        "cadenceHz": 16.985138004246284,
+        "playheadSpan": 0,
+        "scanHeadSpan": 0,
+        "scanRangeSpan": 0,
+        "activeGrainMax": 0
+      }
+    },
+    "transportOnAction": {
+      "ok": true,
+      "state": "on",
+      "snapshot": {
+        "timestampMs": 1771524971460,
+        "protocolValue": "osc",
+        "managedChecked": true,
+        "startupAutoTransportChecked": false,
+        "hostValue": "127.0.0.1",
+        "hostDisabled": true,
+        "portValue": "16447",
+        "portDisabled": true,
+        "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+        "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+        "bridgeMode": "Standalone Local",
+        "engineStatusText": "Engine running (PID 39624)",
+        "engineFeedbackText": "Engine start command accepted (starting).",
+        "audioBridgeFeedbackText": "",
+        "recordFileNameValue": "take.wav",
+        "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+        "startupAuditTrail": [
+          "[19:16:09] STARTUP: engine_start_requested",
+          "[19:16:09] STARTUP: engine_running pid=39624",
+          "[19:16:09] STARTUP: startup_sync_applied transport=none",
+          "[19:16:09] STARTUP: hello_received address=/ec2/hello",
+          "[19:16:09] STARTUP: startup_ready"
+        ]
+      }
+    },
+    "transportOnWindow": {
+      "startedAtMs": 1771524971481,
+      "completedAtMs": 1771524973583,
+      "scans": [
+        {
+          "source": "electron",
+          "timestampMs": 1771524971542,
+          "playheadNorm": 0.0018375018844380975,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            477281,
+            881,
+            4481
+          ],
+          "activeGrainNormPositions": [
+            0.9943354166666667,
+            0.0018354166666666666,
+            0.009335416666666667
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971604,
+          "playheadNorm": 0.0030787016730755568,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            477877,
+            1477,
+            5077
+          ],
+          "activeGrainNormPositions": [
+            0.9955770833333333,
+            0.003077083333333333,
+            0.010577083333333334
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971664,
+          "playheadNorm": 0.004285131581127644,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            478456,
+            2056,
+            5656
+          ],
+          "activeGrainNormPositions": [
+            0.9967833333333334,
+            0.0042833333333333334,
+            0.011783333333333333
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971724,
+          "playheadNorm": 0.005494385492056608,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            479037,
+            2637,
+            6237
+          ],
+          "activeGrainNormPositions": [
+            0.99799375,
+            0.00549375,
+            0.01299375
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971785,
+          "playheadNorm": 0.006707789376378059,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            479619,
+            3219,
+            6819
+          ],
+          "activeGrainNormPositions": [
+            0.99920625,
+            0.00670625,
+            0.01420625
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971846,
+          "playheadNorm": 0.00791978370398283,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            201,
+            3801,
+            7401
+          ],
+          "activeGrainNormPositions": [
+            0.00041875,
+            0.00791875,
+            0.01541875
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971906,
+          "playheadNorm": 0.009128991514444351,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            781,
+            4381,
+            7981
+          ],
+          "activeGrainNormPositions": [
+            0.0016270833333333332,
+            0.009127083333333333,
+            0.016627083333333334
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524971967,
+          "playheadNorm": 0.01035043504089117,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            1368,
+            4968,
+            8568
+          ],
+          "activeGrainNormPositions": [
+            0.00285,
+            0.01035,
+            0.01785
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972028,
+          "playheadNorm": 0.011567855253815651,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            1952,
+            5552,
+            9152
+          ],
+          "activeGrainNormPositions": [
+            0.004066666666666666,
+            0.011566666666666666,
+            0.019066666666666666
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972089,
+          "playheadNorm": 0.012790479697287083,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            2539,
+            6139,
+            9739
+          ],
+          "activeGrainNormPositions": [
+            0.005289583333333334,
+            0.012789583333333333,
+            0.020289583333333333
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972151,
+          "playheadNorm": 0.014019991271197796,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            3129,
+            6729,
+            10329
+          ],
+          "activeGrainNormPositions": [
+            0.00651875,
+            0.01401875,
+            0.02151875
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972213,
+          "playheadNorm": 0.015257617458701134,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            3723,
+            7323,
+            10923
+          ],
+          "activeGrainNormPositions": [
+            0.00775625,
+            0.01525625,
+            0.02275625
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972274,
+          "playheadNorm": 0.01649175025522709,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            4316,
+            7916,
+            11516
+          ],
+          "activeGrainNormPositions": [
+            0.008991666666666667,
+            0.01649166666666667,
+            0.023991666666666668
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972335,
+          "playheadNorm": 0.017715567722916603,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            4903,
+            8503,
+            12103
+          ],
+          "activeGrainNormPositions": [
+            0.010214583333333334,
+            0.017714583333333332,
+            0.025214583333333332
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972397,
+          "playheadNorm": 0.01894473470747471,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            5493,
+            9093,
+            12693
+          ],
+          "activeGrainNormPositions": [
+            0.01144375,
+            0.01894375,
+            0.02644375
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972458,
+          "playheadNorm": 0.020162465050816536,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            6077,
+            9677,
+            13277
+          ],
+          "activeGrainNormPositions": [
+            0.012660416666666667,
+            0.020160416666666667,
+            0.027660416666666666
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972519,
+          "playheadNorm": 0.021378375589847565,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            6661,
+            10261,
+            13861
+          ],
+          "activeGrainNormPositions": [
+            0.013877083333333333,
+            0.021377083333333335,
+            0.028877083333333334
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972580,
+          "playheadNorm": 0.022602049633860588,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            7248,
+            10848,
+            14448
+          ],
+          "activeGrainNormPositions": [
+            0.0151,
+            0.0226,
+            0.0301
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972641,
+          "playheadNorm": 0.023837827146053314,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            7842,
+            11442,
+            15042
+          ],
+          "activeGrainNormPositions": [
+            0.0163375,
+            0.0238375,
+            0.0313375
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972703,
+          "playheadNorm": 0.02507188729941845,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            8434,
+            12034,
+            15634
+          ],
+          "activeGrainNormPositions": [
+            0.017570833333333334,
+            0.025070833333333334,
+            0.032570833333333334
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972764,
+          "playheadNorm": 0.02628294751048088,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            9015,
+            12615,
+            16215
+          ],
+          "activeGrainNormPositions": [
+            0.01878125,
+            0.02628125,
+            0.03378125
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972825,
+          "playheadNorm": 0.0275009423494339,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            9600,
+            13200,
+            16800
+          ],
+          "activeGrainNormPositions": [
+            0.02,
+            0.0275,
+            0.035
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972886,
+          "playheadNorm": 0.028719313442707062,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            10185,
+            13785,
+            17385
+          ],
+          "activeGrainNormPositions": [
+            0.02121875,
+            0.02871875,
+            0.03621875
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524972947,
+          "playheadNorm": 0.029944216832518578,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            10773,
+            14373,
+            17973
+          ],
+          "activeGrainNormPositions": [
+            0.02244375,
+            0.02994375,
+            0.03744375
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524973009,
+          "playheadNorm": 0.031184447929263115,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            11368,
+            14968,
+            18568
+          ],
+          "activeGrainNormPositions": [
+            0.023683333333333334,
+            0.031183333333333334,
+            0.03868333333333333
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524973070,
+          "playheadNorm": 0.03240605816245079,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            11954,
+            15554,
+            19154
+          ],
+          "activeGrainNormPositions": [
+            0.024904166666666668,
+            0.032404166666666664,
+            0.039904166666666664
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524973131,
+          "playheadNorm": 0.03362395986914635,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            12539,
+            16139,
+            19739
+          ],
+          "activeGrainNormPositions": [
+            0.026122916666666666,
+            0.03362291666666667,
+            0.04112291666666667
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524973192,
+          "playheadNorm": 0.034853365272283554,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            13129,
+            16729,
+            20329
+          ],
+          "activeGrainNormPositions": [
+            0.027352083333333332,
+            0.03485208333333333,
+            0.04235208333333333
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524973254,
+          "playheadNorm": 0.03608293831348419,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            13719,
+            17319,
+            20919
+          ],
+          "activeGrainNormPositions": [
+            0.02858125,
+            0.03608125,
+            0.04358125
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524973315,
+          "playheadNorm": 0.03731660917401314,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            14311,
+            17911,
+            21511
+          ],
+          "activeGrainNormPositions": [
+            0.029814583333333332,
+            0.03731458333333333,
+            0.04481458333333333
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524973376,
+          "playheadNorm": 0.03853670507669449,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            14897,
+            18497,
+            22097
+          ],
+          "activeGrainNormPositions": [
+            0.031035416666666666,
+            0.03853541666666667,
+            0.04603541666666667
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524973438,
+          "playheadNorm": 0.03977068141102791,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            15489,
+            19089,
+            22689
+          ],
+          "activeGrainNormPositions": [
+            0.03226875,
+            0.03976875,
+            0.04726875
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524973499,
+          "playheadNorm": 0.04098743200302124,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            16073,
+            19673,
+            23273
+          ],
+          "activeGrainNormPositions": [
+            0.03348541666666666,
+            0.04098541666666667,
+            0.04848541666666667
+          ]
+        },
+        {
+          "source": "electron",
+          "timestampMs": 1771524973561,
+          "playheadNorm": 0.04222716763615608,
+          "scanHeadNorm": 0,
+          "scanRangeNorm": 0.25,
+          "soundFileFrames": 480000,
+          "activeGrainCount": 3,
+          "activeGrainIndices": [
+            16668,
+            20268,
+            23868
+          ],
+          "activeGrainNormPositions": [
+            0.034725,
+            0.042225,
+            0.049725
+          ]
+        }
+      ],
+      "stats": {
+        "count": 34,
+        "elapsedMs": 2019,
+        "cadenceHz": 16.840019811788014,
+        "playheadSpan": 0.040389665751717985,
+        "scanHeadSpan": 0,
+        "scanRangeSpan": 0,
+        "activeGrainMax": 3
+      }
+    },
+    "errors": []
+  },
+  "c2": {
+    "ok": true,
+    "checks": {
+      "stopCyclesAtLeast3": true,
+      "allStopActionsSucceeded": true,
+      "stopTelemetryStableAfterEachCycle": true,
+      "engineStillRunningAfterStopCycles": true,
+      "transportZeroLogsObserved": true,
+      "noUnexpectedExitLog": true
+    },
+    "stopCycles": [
+      {
+        "cycle": 1,
+        "stopAction": {
+          "ok": true,
+          "state": "off",
+          "snapshot": {
+            "timestampMs": 1771524973585,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 39624)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine ON.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:16:09] STARTUP: engine_start_requested",
+              "[19:16:09] STARTUP: engine_running pid=39624",
+              "[19:16:09] STARTUP: startup_sync_applied transport=none",
+              "[19:16:09] STARTUP: hello_received address=/ec2/hello",
+              "[19:16:09] STARTUP: startup_ready"
+            ]
+          }
+        },
+        "stopWindow": {
+          "startedAtMs": 1771524973604,
+          "completedAtMs": 1771524975104,
+          "scans": [
+            {
+              "source": "electron",
+              "timestampMs": 1771524973625,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524973687,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524973748,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524973809,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524973870,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524973932,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524973994,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974054,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974116,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974177,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974239,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974300,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974362,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974423,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974484,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974545,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974607,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974668,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974729,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974791,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974851,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974913,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524974975,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975036,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975097,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            }
+          ],
+          "stats": {
+            "count": 25,
+            "elapsedMs": 1472,
+            "cadenceHz": 16.983695652173914,
+            "playheadSpan": 0,
+            "scanHeadSpan": 0,
+            "scanRangeSpan": 0,
+            "activeGrainMax": 0
+          }
+        }
+      },
+      {
+        "cycle": 2,
+        "stopAction": {
+          "ok": true,
+          "state": "off",
+          "snapshot": {
+            "timestampMs": 1771524975105,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 39624)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine OFF.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:16:09] STARTUP: engine_start_requested",
+              "[19:16:09] STARTUP: engine_running pid=39624",
+              "[19:16:09] STARTUP: startup_sync_applied transport=none",
+              "[19:16:09] STARTUP: hello_received address=/ec2/hello",
+              "[19:16:09] STARTUP: startup_ready"
+            ]
+          }
+        },
+        "stopWindow": {
+          "startedAtMs": 1771524975123,
+          "completedAtMs": 1771524976623,
+          "scans": [
+            {
+              "source": "electron",
+              "timestampMs": 1771524975165,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975226,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975286,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975348,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975409,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975470,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975530,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975592,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975654,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975715,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975776,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975837,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975897,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524975959,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976020,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976081,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976143,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976204,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976265,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976326,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976387,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976448,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976510,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976571,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            }
+          ],
+          "stats": {
+            "count": 24,
+            "elapsedMs": 1406,
+            "cadenceHz": 17.069701280227598,
+            "playheadSpan": 0,
+            "scanHeadSpan": 0,
+            "scanRangeSpan": 0,
+            "activeGrainMax": 0
+          }
+        }
+      },
+      {
+        "cycle": 3,
+        "stopAction": {
+          "ok": true,
+          "state": "off",
+          "snapshot": {
+            "timestampMs": 1771524976624,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 39624)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine OFF.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:16:09] STARTUP: engine_start_requested",
+              "[19:16:09] STARTUP: engine_running pid=39624",
+              "[19:16:09] STARTUP: startup_sync_applied transport=none",
+              "[19:16:09] STARTUP: hello_received address=/ec2/hello",
+              "[19:16:09] STARTUP: startup_ready"
+            ]
+          }
+        },
+        "stopWindow": {
+          "startedAtMs": 1771524976642,
+          "completedAtMs": 1771524978145,
+          "scans": [
+            {
+              "source": "electron",
+              "timestampMs": 1771524976685,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976746,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976807,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976868,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976929,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524976990,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977051,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977112,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977173,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977234,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977296,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977357,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977418,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977480,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977541,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977603,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977664,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977725,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977785,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977846,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977909,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524977969,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978031,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978092,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            }
+          ],
+          "stats": {
+            "count": 24,
+            "elapsedMs": 1407,
+            "cadenceHz": 17.057569296375267,
+            "playheadSpan": 0,
+            "scanHeadSpan": 0,
+            "scanRangeSpan": 0,
+            "activeGrainMax": 0
+          }
+        }
+      }
+    ],
+    "engineStatusAfterStops": {
+      "ok": true,
+      "status": "running",
+      "pid": 39624,
+      "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+      "args": [
+        "--osc-host",
+        "127.0.0.1",
+        "--osc-port",
+        "16447",
+        "--telemetry-host",
+        "127.0.0.1",
+        "--telemetry-port",
+        "16448",
+        "--data-dir",
+        "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+        "--samples-dir",
+        "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+      ],
+      "startedAtMs": 1771524969877,
+      "autoStartEnabled": false
+    },
+    "logsTail": [
+      {
+        "timestampMs": 1771524969877,
+        "source": "system",
+        "line": "Engine started (pid=39624) using C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe"
+      },
+      {
+        "timestampMs": 1771524969890,
+        "source": "stdout",
+        "line": "[ec2_headless] version 1.2"
+      },
+      {
+        "timestampMs": 1771524969890,
+        "source": "stdout",
+        "line": "[ec2_headless] pid 39624"
+      },
+      {
+        "timestampMs": 1771524969890,
+        "source": "stdout",
+        "line": "[ec2_headless] osc 127.0.0.1:16447"
+      },
+      {
+        "timestampMs": 1771524969890,
+        "source": "stdout",
+        "line": "[ec2_headless] telemetry 127.0.0.1:16448"
+      },
+      {
+        "timestampMs": 1771524969890,
+        "source": "stdout",
+        "line": "[ec2_headless] telemetryIntervalMs 50"
+      },
+      {
+        "timestampMs": 1771524969890,
+        "source": "stdout",
+        "line": "[ec2_headless] dataDir C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2"
+      },
+      {
+        "timestampMs": 1771524969890,
+        "source": "stdout",
+        "line": "[ec2_headless] samplesDir C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+      },
+      {
+        "timestampMs": 1771524969890,
+        "source": "stdout",
+        "line": "[ec2_headless] autostartAudio 0"
+      },
+      {
+        "timestampMs": 1771524969890,
+        "source": "stdout",
+        "line": "[ec2_headless] noAudio 0"
+      },
+      {
+        "timestampMs": 1771524969891,
+        "source": "stdout",
+        "line": "[ec2_headless] sent /ec2/hello to 127.0.0.1:16448"
+      },
+      {
+        "timestampMs": 1771524969891,
+        "source": "stdout",
+        "line": "[ec2_headless] sending /ec2/telemetry/scan every 50ms"
+      },
+      {
+        "timestampMs": 1771524969956,
+        "source": "stdout",
+        "line": "[ec2_headless] record fileName take.wav"
+      },
+      {
+        "timestampMs": 1771524969956,
+        "source": "stdout",
+        "line": "[ec2_headless] record outputFolder C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869"
+      },
+      {
+        "timestampMs": 1771524971460,
+        "source": "stdout",
+        "line": "[ec2_headless] transport 1"
+      },
+      {
+        "timestampMs": 1771524973584,
+        "source": "stdout",
+        "line": "[ec2_headless] transport 0"
+      }
+    ],
+    "errors": []
+  },
+  "c3": {
+    "ok": true,
+    "checks": {
+      "baselineStartupTransportZero": true,
+      "autostartStartupTransportOne": true,
+      "autostartTelemetryMoves": true,
+      "noAudioOverridesStartupTransport": true,
+      "noAudioTransportCommandIgnoredLogPresent": true,
+      "noAudioTransportRemainsStableAfterTransportOn": true
+    },
+    "scenarios": {
+      "baseline": {
+        "scenarioName": "c3_baseline",
+        "flags": {
+          "autoStartAudio": false,
+          "noAudio": false
+        },
+        "startResult": {
+          "command": "start",
+          "expectedStatus": "running",
+          "ok": true,
+          "startedAt": "2026-02-19T18:16:18.210Z",
+          "completedAt": "2026-02-19T18:16:18.294Z",
+          "statusAfter": {
+            "ok": true,
+            "status": "running",
+            "pid": 45292,
+            "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+            "args": [
+              "--osc-host",
+              "127.0.0.1",
+              "--osc-port",
+              "16447",
+              "--telemetry-host",
+              "127.0.0.1",
+              "--telemetry-port",
+              "16448",
+              "--data-dir",
+              "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+              "--samples-dir",
+              "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+            ],
+            "startedAtMs": 1771524978215,
+            "autoStartEnabled": false
+          },
+          "snapshotAfter": {
+            "timestampMs": 1771524978295,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 45292)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine OFF.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:16:09] STARTUP: engine_running pid=39624",
+              "[19:16:09] STARTUP: startup_sync_applied transport=none",
+              "[19:16:09] STARTUP: hello_received address=/ec2/hello",
+              "[19:16:09] STARTUP: startup_ready",
+              "[19:16:18] STARTUP: engine_start_requested",
+              "[19:16:18] STARTUP: engine_running pid=45292"
+            ]
+          }
+        },
+        "hello": {
+          "source": "electron",
+          "timestampMs": 1771524978227,
+          "address": "/ec2/hello",
+          "args": [
+            "version=1.2",
+            "build=Feb 19 2026 19:14:34",
+            "pid=45292",
+            "osc=127.0.0.1:16447",
+            "telemetry=127.0.0.1:16448",
+            "sampleRate=48000",
+            "bufferSize=1024",
+            "channelsOut=2",
+            "telemetryIntervalMs=50",
+            "autostartAudio=0",
+            "noAudio=0",
+            "startupTransport=0",
+            "dataDir=C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+            "samplesDir=C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          ]
+        },
+        "helloArgsMap": {
+          "version": "1.2",
+          "build": "Feb 19 2026 19:14:34",
+          "pid": "45292",
+          "osc": "127.0.0.1:16447",
+          "telemetry": "127.0.0.1:16448",
+          "sampleRate": "48000",
+          "bufferSize": "1024",
+          "channelsOut": "2",
+          "telemetryIntervalMs": "50",
+          "autostartAudio": "0",
+          "noAudio": "0",
+          "startupTransport": "0",
+          "dataDir": "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+          "samplesDir": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+        },
+        "startupWindow": {
+          "startedAtMs": 1771524978294,
+          "completedAtMs": 1771524980098,
+          "scans": [
+            {
+              "source": "electron",
+              "timestampMs": 1771524978348,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978409,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978470,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978531,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978593,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978654,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978715,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978776,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978837,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978900,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524978960,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979022,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979083,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979145,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979206,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979268,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979329,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979390,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979451,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979512,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979573,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979634,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979695,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979756,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979817,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979878,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524979940,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980001,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980062,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            }
+          ],
+          "stats": {
+            "count": 29,
+            "elapsedMs": 1714,
+            "cadenceHz": 16.91948658109685,
+            "playheadSpan": 0,
+            "scanHeadSpan": 0,
+            "scanRangeSpan": 0,
+            "activeGrainMax": 0
+          }
+        },
+        "transportOnAction": null,
+        "postTransportWindow": null,
+        "logs": [
+          {
+            "timestampMs": 1771524978215,
+            "source": "system",
+            "line": "Engine started (pid=45292) using C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe"
+          },
+          {
+            "timestampMs": 1771524978226,
+            "source": "stdout",
+            "line": "[ec2_headless] version 1.2"
+          },
+          {
+            "timestampMs": 1771524978226,
+            "source": "stdout",
+            "line": "[ec2_headless] pid 45292"
+          },
+          {
+            "timestampMs": 1771524978226,
+            "source": "stdout",
+            "line": "[ec2_headless] osc 127.0.0.1:16447"
+          },
+          {
+            "timestampMs": 1771524978226,
+            "source": "stdout",
+            "line": "[ec2_headless] telemetry 127.0.0.1:16448"
+          },
+          {
+            "timestampMs": 1771524978226,
+            "source": "stdout",
+            "line": "[ec2_headless] telemetryIntervalMs 50"
+          },
+          {
+            "timestampMs": 1771524978226,
+            "source": "stdout",
+            "line": "[ec2_headless] dataDir C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2"
+          },
+          {
+            "timestampMs": 1771524978226,
+            "source": "stdout",
+            "line": "[ec2_headless] samplesDir C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          },
+          {
+            "timestampMs": 1771524978226,
+            "source": "stdout",
+            "line": "[ec2_headless] autostartAudio 0"
+          },
+          {
+            "timestampMs": 1771524978226,
+            "source": "stdout",
+            "line": "[ec2_headless] noAudio 0"
+          },
+          {
+            "timestampMs": 1771524978227,
+            "source": "stdout",
+            "line": "[ec2_headless] sent /ec2/hello to 127.0.0.1:16448"
+          },
+          {
+            "timestampMs": 1771524978227,
+            "source": "stdout",
+            "line": "[ec2_headless] sending /ec2/telemetry/scan every 50ms"
+          }
+        ],
+        "stopResult": {
+          "command": "stop",
+          "expectedStatus": "stopped",
+          "ok": true,
+          "startedAt": "2026-02-19T18:16:20.098Z",
+          "completedAt": "2026-02-19T18:16:20.175Z",
+          "statusAfter": {
+            "ok": true,
+            "status": "stopped",
+            "pid": null,
+            "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+            "args": [
+              "--osc-host",
+              "127.0.0.1",
+              "--osc-port",
+              "16447",
+              "--telemetry-host",
+              "127.0.0.1",
+              "--telemetry-port",
+              "16448",
+              "--data-dir",
+              "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+              "--samples-dir",
+              "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+            ],
+            "startedAtMs": 1771524978215,
+            "stoppedAtMs": 1771524980100,
+            "autoStartEnabled": false
+          },
+          "snapshotAfter": {
+            "timestampMs": 1771524980176,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine stopped",
+            "engineFeedbackText": "Engine stop command accepted (stopped).",
+            "audioBridgeFeedbackText": "Audio engine OFF.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:16:09] STARTUP: engine_running pid=39624",
+              "[19:16:09] STARTUP: startup_sync_applied transport=none",
+              "[19:16:09] STARTUP: hello_received address=/ec2/hello",
+              "[19:16:09] STARTUP: startup_ready",
+              "[19:16:18] STARTUP: engine_start_requested",
+              "[19:16:18] STARTUP: engine_running pid=45292"
+            ]
+          }
+        }
+      },
+      "autostartAudio": {
+        "scenarioName": "c3_autostart_audio",
+        "flags": {
+          "autoStartAudio": true,
+          "noAudio": false
+        },
+        "startResult": {
+          "command": "start",
+          "expectedStatus": "running",
+          "ok": true,
+          "startedAt": "2026-02-19T18:16:20.176Z",
+          "completedAt": "2026-02-19T18:16:20.260Z",
+          "statusAfter": {
+            "ok": true,
+            "status": "running",
+            "pid": 49228,
+            "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+            "args": [
+              "--osc-host",
+              "127.0.0.1",
+              "--osc-port",
+              "16447",
+              "--telemetry-host",
+              "127.0.0.1",
+              "--telemetry-port",
+              "16448",
+              "--data-dir",
+              "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+              "--samples-dir",
+              "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples",
+              "--autostart-audio"
+            ],
+            "startedAtMs": 1771524980181,
+            "autoStartEnabled": false
+          },
+          "snapshotAfter": {
+            "timestampMs": 1771524980260,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 49228)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine OFF.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:16:09] STARTUP: hello_received address=/ec2/hello",
+              "[19:16:09] STARTUP: startup_ready",
+              "[19:16:18] STARTUP: engine_start_requested",
+              "[19:16:18] STARTUP: engine_running pid=45292",
+              "[19:16:20] STARTUP: engine_start_requested",
+              "[19:16:20] STARTUP: engine_running pid=49228"
+            ]
+          }
+        },
+        "hello": {
+          "source": "electron",
+          "timestampMs": 1771524980192,
+          "address": "/ec2/hello",
+          "args": [
+            "version=1.2",
+            "build=Feb 19 2026 19:14:34",
+            "pid=49228",
+            "osc=127.0.0.1:16447",
+            "telemetry=127.0.0.1:16448",
+            "sampleRate=48000",
+            "bufferSize=1024",
+            "channelsOut=2",
+            "telemetryIntervalMs=50",
+            "autostartAudio=1",
+            "noAudio=0",
+            "startupTransport=1",
+            "dataDir=C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+            "samplesDir=C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          ]
+        },
+        "helloArgsMap": {
+          "version": "1.2",
+          "build": "Feb 19 2026 19:14:34",
+          "pid": "49228",
+          "osc": "127.0.0.1:16447",
+          "telemetry": "127.0.0.1:16448",
+          "sampleRate": "48000",
+          "bufferSize": "1024",
+          "channelsOut": "2",
+          "telemetryIntervalMs": "50",
+          "autostartAudio": "1",
+          "noAudio": "0",
+          "startupTransport": "1",
+          "dataDir": "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+          "samplesDir": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+        },
+        "startupWindow": {
+          "startedAtMs": 1771524980260,
+          "completedAtMs": 1771524982063,
+          "scans": [
+            {
+              "source": "electron",
+              "timestampMs": 1771524980315,
+              "playheadNorm": 0.0024633740540593863,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                477582,
+                478097,
+                478611,
+                479125,
+                479640,
+                154,
+                668,
+                1182,
+                1696,
+                2210,
+                2724,
+                3239,
+                3753,
+                4267,
+                4782
+              ],
+              "activeGrainNormPositions": [
+                0.9949625,
+                0.9960354166666666,
+                0.99710625,
+                0.9981770833333333,
+                0.99925,
+                0.00032083333333333334,
+                0.0013916666666666667,
+                0.0024625,
+                0.003533333333333333,
+                0.004604166666666667,
+                0.005675,
+                0.006747916666666667,
+                0.00781875,
+                0.008889583333333333,
+                0.0099625
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980377,
+              "playheadNorm": 0.003692725906148553,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                478172,
+                478687,
+                479201,
+                479715,
+                230,
+                744,
+                1258,
+                1772,
+                2286,
+                2800,
+                3314,
+                3829,
+                4343,
+                4857,
+                5372
+              ],
+              "activeGrainNormPositions": [
+                0.9961916666666667,
+                0.9972645833333333,
+                0.9983354166666667,
+                0.99940625,
+                0.00047916666666666664,
+                0.00155,
+                0.0026208333333333335,
+                0.003691666666666667,
+                0.0047625,
+                0.005833333333333334,
+                0.006904166666666667,
+                0.007977083333333333,
+                0.009047916666666666,
+                0.01011875,
+                0.011191666666666667
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980438,
+              "playheadNorm": 0.004923357628285885,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                478763,
+                479278,
+                479792,
+                306,
+                821,
+                1335,
+                1849,
+                2363,
+                2877,
+                3391,
+                3905,
+                4420,
+                4934,
+                5448,
+                5963
+              ],
+              "activeGrainNormPositions": [
+                0.9974229166666667,
+                0.9984958333333334,
+                0.9995666666666667,
+                0.0006375,
+                0.0017104166666666667,
+                0.00278125,
+                0.0038520833333333332,
+                0.004922916666666667,
+                0.00599375,
+                0.007064583333333333,
+                0.008135416666666668,
+                0.009208333333333334,
+                0.010279166666666667,
+                0.01135,
+                0.012422916666666667
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980500,
+              "playheadNorm": 0.006159927695989609,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                479356,
+                479871,
+                385,
+                899,
+                1414,
+                1928,
+                2442,
+                2956,
+                3470,
+                3984,
+                4498,
+                5013,
+                5527,
+                6041,
+                6556
+              ],
+              "activeGrainNormPositions": [
+                0.9986583333333333,
+                0.99973125,
+                0.0008020833333333334,
+                0.0018729166666666666,
+                0.0029458333333333333,
+                0.004016666666666667,
+                0.0050875,
+                0.006158333333333333,
+                0.007229166666666667,
+                0.0083,
+                0.009370833333333333,
+                0.01044375,
+                0.011514583333333333,
+                0.012585416666666667,
+                0.013658333333333333
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980562,
+              "playheadNorm": 0.007386633660644293,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                479945,
+                460,
+                974,
+                1488,
+                2003,
+                2517,
+                3031,
+                3545,
+                4059,
+                4573,
+                5087,
+                5602,
+                6116,
+                6630,
+                7145
+              ],
+              "activeGrainNormPositions": [
+                0.9998854166666666,
+                0.0009583333333333333,
+                0.0020291666666666665,
+                0.0031,
+                0.004172916666666667,
+                0.00524375,
+                0.0063145833333333335,
+                0.007385416666666667,
+                0.00845625,
+                0.009527083333333334,
+                0.010597916666666667,
+                0.011670833333333333,
+                0.012741666666666667,
+                0.0138125,
+                0.014885416666666667
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980623,
+              "playheadNorm": 0.008615645579993725,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                535,
+                1050,
+                1564,
+                2078,
+                2593,
+                3107,
+                3621,
+                4135,
+                4649,
+                5163,
+                5677,
+                6192,
+                6706,
+                7220,
+                7735
+              ],
+              "activeGrainNormPositions": [
+                0.0011145833333333333,
+                0.0021875,
+                0.003258333333333333,
+                0.004329166666666667,
+                0.005402083333333333,
+                0.006472916666666667,
+                0.00754375,
+                0.008614583333333333,
+                0.009685416666666667,
+                0.01075625,
+                0.011827083333333334,
+                0.0129,
+                0.013970833333333333,
+                0.015041666666666667,
+                0.016114583333333335
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980684,
+              "playheadNorm": 0.00983748771250248,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                1121,
+                1636,
+                2150,
+                2664,
+                3179,
+                3693,
+                4207,
+                4721,
+                5235,
+                5749,
+                6263,
+                6778,
+                7292,
+                7806,
+                8321
+              ],
+              "activeGrainNormPositions": [
+                0.0023354166666666666,
+                0.0034083333333333335,
+                0.004479166666666667,
+                0.00555,
+                0.006622916666666667,
+                0.00769375,
+                0.008764583333333333,
+                0.009835416666666666,
+                0.01090625,
+                0.011977083333333333,
+                0.013047916666666666,
+                0.014120833333333334,
+                0.015191666666666666,
+                0.0162625,
+                0.017335416666666666
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980745,
+              "playheadNorm": 0.01106207724660635,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                1709,
+                2224,
+                2738,
+                3252,
+                3767,
+                4281,
+                4795,
+                5309,
+                5823,
+                6337,
+                6851,
+                7366,
+                7880,
+                8394,
+                8909
+              ],
+              "activeGrainNormPositions": [
+                0.0035604166666666666,
+                0.004633333333333333,
+                0.005704166666666666,
+                0.006775,
+                0.007847916666666666,
+                0.00891875,
+                0.009989583333333333,
+                0.011060416666666666,
+                0.01213125,
+                0.013202083333333333,
+                0.014272916666666666,
+                0.015345833333333333,
+                0.016416666666666666,
+                0.0174875,
+                0.018560416666666666
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980806,
+              "playheadNorm": 0.012282807379961014,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                2295,
+                2810,
+                3324,
+                3838,
+                4353,
+                4867,
+                5381,
+                5895,
+                6409,
+                6923,
+                7437,
+                7952,
+                8466,
+                8980,
+                9495
+              ],
+              "activeGrainNormPositions": [
+                0.00478125,
+                0.005854166666666666,
+                0.006925,
+                0.007995833333333334,
+                0.00906875,
+                0.010139583333333334,
+                0.011210416666666667,
+                0.01228125,
+                0.013352083333333334,
+                0.014422916666666667,
+                0.01549375,
+                0.016566666666666667,
+                0.0176375,
+                0.018708333333333334,
+                0.01978125
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980867,
+              "playheadNorm": 0.013502667658030987,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                2881,
+                3396,
+                3910,
+                4424,
+                4939,
+                5453,
+                5967,
+                6481,
+                6995,
+                7509,
+                8023,
+                8538,
+                9052,
+                9566,
+                10081
+              ],
+              "activeGrainNormPositions": [
+                0.006002083333333333,
+                0.007075,
+                0.008145833333333333,
+                0.009216666666666666,
+                0.010289583333333333,
+                0.011360416666666666,
+                0.01243125,
+                0.013502083333333333,
+                0.014572916666666666,
+                0.01564375,
+                0.016714583333333335,
+                0.0177875,
+                0.018858333333333335,
+                0.019929166666666668,
+                0.021002083333333334
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980928,
+              "playheadNorm": 0.014722400344908237,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                3466,
+                3981,
+                4495,
+                5009,
+                5524,
+                6038,
+                6552,
+                7066,
+                7580,
+                8094,
+                8608,
+                9123,
+                9637,
+                10151,
+                10666
+              ],
+              "activeGrainNormPositions": [
+                0.0072208333333333334,
+                0.00829375,
+                0.009364583333333334,
+                0.010435416666666667,
+                0.011508333333333334,
+                0.012579166666666667,
+                0.01365,
+                0.014720833333333334,
+                0.015791666666666666,
+                0.0168625,
+                0.017933333333333332,
+                0.01900625,
+                0.020077083333333332,
+                0.021147916666666666,
+                0.022220833333333332
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524980990,
+              "playheadNorm": 0.015949765220284462,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                4055,
+                4570,
+                5084,
+                5598,
+                6113,
+                6627,
+                7141,
+                7655,
+                8169,
+                8683,
+                9197,
+                9712,
+                10226,
+                10740,
+                11255
+              ],
+              "activeGrainNormPositions": [
+                0.008447916666666666,
+                0.009520833333333333,
+                0.010591666666666666,
+                0.0116625,
+                0.012735416666666667,
+                0.01380625,
+                0.014877083333333334,
+                0.015947916666666666,
+                0.01701875,
+                0.018089583333333333,
+                0.019160416666666666,
+                0.020233333333333332,
+                0.021304166666666666,
+                0.022375,
+                0.023447916666666666
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981051,
+              "playheadNorm": 0.017173439264297485,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                4643,
+                5158,
+                5672,
+                6186,
+                6701,
+                7215,
+                7729,
+                8243,
+                8757,
+                9271,
+                9785,
+                10300,
+                10814,
+                11328,
+                11843
+              ],
+              "activeGrainNormPositions": [
+                0.009672916666666666,
+                0.010745833333333333,
+                0.011816666666666666,
+                0.0128875,
+                0.013960416666666666,
+                0.01503125,
+                0.016102083333333333,
+                0.017172916666666666,
+                0.01824375,
+                0.019314583333333333,
+                0.020385416666666666,
+                0.021458333333333333,
+                0.022529166666666666,
+                0.0236,
+                0.024672916666666666
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981112,
+              "playheadNorm": 0.018402624875307083,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                5233,
+                5748,
+                6262,
+                6776,
+                7291,
+                7805,
+                8319,
+                8833,
+                9347,
+                9861,
+                10375,
+                10890,
+                11404,
+                11918,
+                12433
+              ],
+              "activeGrainNormPositions": [
+                0.010902083333333333,
+                0.011975,
+                0.013045833333333333,
+                0.014116666666666666,
+                0.015189583333333333,
+                0.016260416666666666,
+                0.01733125,
+                0.018402083333333333,
+                0.019472916666666666,
+                0.02054375,
+                0.021614583333333333,
+                0.0226875,
+                0.023758333333333333,
+                0.024829166666666666,
+                0.025902083333333333
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981173,
+              "playheadNorm": 0.01962120831012726,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                5818,
+                6333,
+                6847,
+                7361,
+                7876,
+                8390,
+                8904,
+                9418,
+                9932,
+                10446,
+                10960,
+                11475,
+                11989,
+                12503,
+                13018
+              ],
+              "activeGrainNormPositions": [
+                0.012120833333333334,
+                0.01319375,
+                0.014264583333333334,
+                0.015335416666666667,
+                0.016408333333333334,
+                0.017479166666666667,
+                0.01855,
+                0.019620833333333334,
+                0.020691666666666667,
+                0.0217625,
+                0.022833333333333334,
+                0.02390625,
+                0.024977083333333334,
+                0.026047916666666667,
+                0.027120833333333334
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981235,
+              "playheadNorm": 0.02084723860025406,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                6406,
+                6921,
+                7435,
+                7949,
+                8464,
+                8978,
+                9492,
+                10006,
+                10520,
+                11034,
+                11548,
+                12063,
+                12577,
+                13091,
+                13606
+              ],
+              "activeGrainNormPositions": [
+                0.013345833333333333,
+                0.01441875,
+                0.015489583333333333,
+                0.016560416666666668,
+                0.017633333333333334,
+                0.018704166666666668,
+                0.019775,
+                0.020845833333333334,
+                0.021916666666666668,
+                0.0229875,
+                0.024058333333333334,
+                0.02513125,
+                0.026202083333333334,
+                0.027272916666666668,
+                0.028345833333333334
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981296,
+              "playheadNorm": 0.022067371755838394,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                6992,
+                7507,
+                8021,
+                8535,
+                9050,
+                9564,
+                10078,
+                10592,
+                11106,
+                11620,
+                12134,
+                12649,
+                13163,
+                13677,
+                14192
+              ],
+              "activeGrainNormPositions": [
+                0.014566666666666667,
+                0.01563958333333333,
+                0.016710416666666665,
+                0.01778125,
+                0.01885416666666667,
+                0.019925,
+                0.02099583333333333,
+                0.022066666666666665,
+                0.0231375,
+                0.02420833333333333,
+                0.025279166666666665,
+                0.026352083333333335,
+                0.02742291666666667,
+                0.02849375,
+                0.029566666666666668
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981357,
+              "playheadNorm": 0.023286789655685425,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                7577,
+                8092,
+                8606,
+                9120,
+                9635,
+                10149,
+                10663,
+                11177,
+                11691,
+                12205,
+                12719,
+                13234,
+                13748,
+                14262,
+                14777
+              ],
+              "activeGrainNormPositions": [
+                0.015785416666666666,
+                0.016858333333333333,
+                0.017929166666666666,
+                0.019,
+                0.020072916666666666,
+                0.02114375,
+                0.022214583333333333,
+                0.023285416666666666,
+                0.02435625,
+                0.025427083333333333,
+                0.026497916666666666,
+                0.027570833333333333,
+                0.028641666666666666,
+                0.0297125,
+                0.030785416666666666
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981418,
+              "playheadNorm": 0.024507373571395874,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                8163,
+                8678,
+                9192,
+                9706,
+                10221,
+                10735,
+                11249,
+                11763,
+                12277,
+                12791,
+                13305,
+                13820,
+                14334,
+                14848,
+                15363
+              ],
+              "activeGrainNormPositions": [
+                0.01700625,
+                0.018079166666666667,
+                0.01915,
+                0.020220833333333334,
+                0.02129375,
+                0.022364583333333334,
+                0.023435416666666667,
+                0.02450625,
+                0.025577083333333334,
+                0.026647916666666667,
+                0.02771875,
+                0.028791666666666667,
+                0.0298625,
+                0.030933333333333334,
+                0.03200625
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981479,
+              "playheadNorm": 0.025727849453687668,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                8749,
+                9264,
+                9778,
+                10292,
+                10807,
+                11321,
+                11835,
+                12349,
+                12863,
+                13377,
+                13891,
+                14406,
+                14920,
+                15434,
+                15949
+              ],
+              "activeGrainNormPositions": [
+                0.018227083333333335,
+                0.0193,
+                0.020370833333333335,
+                0.021441666666666668,
+                0.022514583333333334,
+                0.023585416666666668,
+                0.02465625,
+                0.025727083333333334,
+                0.026797916666666668,
+                0.02786875,
+                0.028939583333333335,
+                0.0300125,
+                0.031083333333333334,
+                0.032154166666666664,
+                0.03322708333333333
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981540,
+              "playheadNorm": 0.026952655985951424,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                9337,
+                9852,
+                10366,
+                10880,
+                11395,
+                11909,
+                12423,
+                12937,
+                13451,
+                13965,
+                14479,
+                14994,
+                15508,
+                16022,
+                16537
+              ],
+              "activeGrainNormPositions": [
+                0.01945208333333333,
+                0.020525,
+                0.021595833333333335,
+                0.02266666666666667,
+                0.023739583333333335,
+                0.024810416666666668,
+                0.02588125,
+                0.026952083333333335,
+                0.028022916666666668,
+                0.02909375,
+                0.030164583333333335,
+                0.0312375,
+                0.032308333333333335,
+                0.03337916666666667,
+                0.034452083333333335
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981601,
+              "playheadNorm": 0.028175488114356995,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                9924,
+                10439,
+                10953,
+                11467,
+                11982,
+                12496,
+                13010,
+                13524,
+                14038,
+                14552,
+                15066,
+                15581,
+                16095,
+                16609,
+                17124
+              ],
+              "activeGrainNormPositions": [
+                0.020675,
+                0.021747916666666665,
+                0.02281875,
+                0.023889583333333332,
+                0.0249625,
+                0.026033333333333332,
+                0.027104166666666665,
+                0.028175,
+                0.029245833333333332,
+                0.030316666666666665,
+                0.0313875,
+                0.032460416666666665,
+                0.03353125,
+                0.03460208333333333,
+                0.035675
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981662,
+              "playheadNorm": 0.02939683198928833,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                10510,
+                11025,
+                11539,
+                12053,
+                12568,
+                13082,
+                13596,
+                14110,
+                14624,
+                15138,
+                15652,
+                16167,
+                16681,
+                17195,
+                17710
+              ],
+              "activeGrainNormPositions": [
+                0.021895833333333333,
+                0.02296875,
+                0.024039583333333333,
+                0.025110416666666666,
+                0.026183333333333333,
+                0.027254166666666666,
+                0.028325,
+                0.029395833333333333,
+                0.030466666666666666,
+                0.0315375,
+                0.032608333333333336,
+                0.03368125,
+                0.034752083333333336,
+                0.03582291666666667,
+                0.036895833333333336
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981724,
+              "playheadNorm": 0.03062516450881958,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                11100,
+                11615,
+                12129,
+                12643,
+                13158,
+                13672,
+                14186,
+                14700,
+                15214,
+                15728,
+                16242,
+                16757,
+                17271,
+                17785,
+                18300
+              ],
+              "activeGrainNormPositions": [
+                0.023125,
+                0.024197916666666666,
+                0.02526875,
+                0.026339583333333333,
+                0.0274125,
+                0.028483333333333333,
+                0.029554166666666666,
+                0.030625,
+                0.03169583333333333,
+                0.032766666666666666,
+                0.0338375,
+                0.034910416666666666,
+                0.03598125,
+                0.03705208333333333,
+                0.038125
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981785,
+              "playheadNorm": 0.03184646740555763,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                11686,
+                12201,
+                12715,
+                13229,
+                13744,
+                14258,
+                14772,
+                15286,
+                15800,
+                16314,
+                16828,
+                17343,
+                17857,
+                18371,
+                18886
+              ],
+              "activeGrainNormPositions": [
+                0.024345833333333334,
+                0.02541875,
+                0.026489583333333334,
+                0.027560416666666667,
+                0.028633333333333334,
+                0.029704166666666667,
+                0.030775,
+                0.03184583333333333,
+                0.032916666666666664,
+                0.0339875,
+                0.03505833333333333,
+                0.03613125,
+                0.03720208333333333,
+                0.03827291666666666,
+                0.03934583333333333
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981846,
+              "playheadNorm": 0.03306547924876213,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                12271,
+                12786,
+                13300,
+                13814,
+                14329,
+                14843,
+                15357,
+                15871,
+                16385,
+                16899,
+                17413,
+                17928,
+                18442,
+                18956,
+                19471
+              ],
+              "activeGrainNormPositions": [
+                0.025564583333333335,
+                0.0266375,
+                0.027708333333333335,
+                0.028779166666666668,
+                0.029852083333333335,
+                0.030922916666666668,
+                0.03199375,
+                0.033064583333333335,
+                0.03413541666666667,
+                0.03520625,
+                0.036277083333333335,
+                0.03735,
+                0.038420833333333335,
+                0.03949166666666667,
+                0.040564583333333334
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981907,
+              "playheadNorm": 0.03428582102060318,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                12857,
+                13372,
+                13886,
+                14400,
+                14915,
+                15429,
+                15943,
+                16457,
+                16971,
+                17485,
+                17999,
+                18514,
+                19028,
+                19542,
+                20057
+              ],
+              "activeGrainNormPositions": [
+                0.026785416666666666,
+                0.027858333333333332,
+                0.028929166666666666,
+                0.03,
+                0.031072916666666665,
+                0.03214375,
+                0.03321458333333333,
+                0.034285416666666665,
+                0.03535625,
+                0.03642708333333333,
+                0.037497916666666666,
+                0.03857083333333333,
+                0.039641666666666665,
+                0.0407125,
+                0.041785416666666665
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524981967,
+              "playheadNorm": 0.035500556230545044,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                13440,
+                13955,
+                14469,
+                14983,
+                15498,
+                16012,
+                16526,
+                17040,
+                17554,
+                18068,
+                18582,
+                19097,
+                19611,
+                20125,
+                20640
+              ],
+              "activeGrainNormPositions": [
+                0.028,
+                0.029072916666666667,
+                0.03014375,
+                0.031214583333333334,
+                0.0322875,
+                0.03335833333333333,
+                0.034429166666666663,
+                0.0355,
+                0.03657083333333333,
+                0.037641666666666664,
+                0.0387125,
+                0.03978541666666666,
+                0.04085625,
+                0.04192708333333333,
+                0.043
+              ]
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982028,
+              "playheadNorm": 0.03671586513519287,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 15,
+              "activeGrainIndices": [
+                14023,
+                14538,
+                15052,
+                15566,
+                16081,
+                16595,
+                17109,
+                17623,
+                18137,
+                18651,
+                19165,
+                19680,
+                20194,
+                20708,
+                21223
+              ],
+              "activeGrainNormPositions": [
+                0.029214583333333332,
+                0.0302875,
+                0.031358333333333335,
+                0.03242916666666667,
+                0.033502083333333335,
+                0.03457291666666667,
+                0.03564375,
+                0.036714583333333335,
+                0.03778541666666667,
+                0.03885625,
+                0.039927083333333335,
+                0.041,
+                0.042070833333333335,
+                0.04314166666666667,
+                0.044214583333333335
+              ]
+            }
+          ],
+          "stats": {
+            "count": 29,
+            "elapsedMs": 1713,
+            "cadenceHz": 16.929363689433742,
+            "playheadSpan": 0.034252491081133485,
+            "scanHeadSpan": 0,
+            "scanRangeSpan": 0,
+            "activeGrainMax": 15
+          }
+        },
+        "transportOnAction": null,
+        "postTransportWindow": null,
+        "logs": [
+          {
+            "timestampMs": 1771524980181,
+            "source": "system",
+            "line": "Engine started (pid=49228) using C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe"
+          },
+          {
+            "timestampMs": 1771524980191,
+            "source": "stdout",
+            "line": "[ec2_headless] version 1.2"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] pid 49228"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] osc 127.0.0.1:16447"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] telemetry 127.0.0.1:16448"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] telemetryIntervalMs 50"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] dataDir C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] samplesDir C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] autostartAudio 1"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] noAudio 0"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] sent /ec2/hello to 127.0.0.1:16448"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] sending /ec2/telemetry/scan every 50ms"
+          },
+          {
+            "timestampMs": 1771524980192,
+            "source": "stdout",
+            "line": "[ec2_headless] transport 1 (autostart)"
+          }
+        ],
+        "stopResult": {
+          "command": "stop",
+          "expectedStatus": "stopped",
+          "ok": true,
+          "startedAt": "2026-02-19T18:16:22.063Z",
+          "completedAt": "2026-02-19T18:16:22.142Z",
+          "statusAfter": {
+            "ok": true,
+            "status": "stopped",
+            "pid": null,
+            "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+            "args": [
+              "--osc-host",
+              "127.0.0.1",
+              "--osc-port",
+              "16447",
+              "--telemetry-host",
+              "127.0.0.1",
+              "--telemetry-port",
+              "16448",
+              "--data-dir",
+              "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+              "--samples-dir",
+              "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples",
+              "--autostart-audio"
+            ],
+            "startedAtMs": 1771524980181,
+            "stoppedAtMs": 1771524982065,
+            "autoStartEnabled": false
+          },
+          "snapshotAfter": {
+            "timestampMs": 1771524982142,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine stopped",
+            "engineFeedbackText": "Engine stop command accepted (stopped).",
+            "audioBridgeFeedbackText": "Audio engine OFF.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:16:09] STARTUP: hello_received address=/ec2/hello",
+              "[19:16:09] STARTUP: startup_ready",
+              "[19:16:18] STARTUP: engine_start_requested",
+              "[19:16:18] STARTUP: engine_running pid=45292",
+              "[19:16:20] STARTUP: engine_start_requested",
+              "[19:16:20] STARTUP: engine_running pid=49228"
+            ]
+          }
+        }
+      },
+      "noAudioOverride": {
+        "scenarioName": "c3_no_audio_override",
+        "flags": {
+          "autoStartAudio": true,
+          "noAudio": true
+        },
+        "startResult": {
+          "command": "start",
+          "expectedStatus": "running",
+          "ok": true,
+          "startedAt": "2026-02-19T18:16:22.142Z",
+          "completedAt": "2026-02-19T18:16:22.228Z",
+          "statusAfter": {
+            "ok": true,
+            "status": "running",
+            "pid": 49660,
+            "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+            "args": [
+              "--osc-host",
+              "127.0.0.1",
+              "--osc-port",
+              "16447",
+              "--telemetry-host",
+              "127.0.0.1",
+              "--telemetry-port",
+              "16448",
+              "--data-dir",
+              "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+              "--samples-dir",
+              "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples",
+              "--autostart-audio",
+              "--no-audio"
+            ],
+            "startedAtMs": 1771524982149,
+            "autoStartEnabled": false
+          },
+          "snapshotAfter": {
+            "timestampMs": 1771524982228,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 49660)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine OFF.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:16:18] STARTUP: engine_start_requested",
+              "[19:16:18] STARTUP: engine_running pid=45292",
+              "[19:16:20] STARTUP: engine_start_requested",
+              "[19:16:20] STARTUP: engine_running pid=49228",
+              "[19:16:22] STARTUP: engine_start_requested",
+              "[19:16:22] STARTUP: engine_running pid=49660"
+            ]
+          }
+        },
+        "hello": {
+          "source": "electron",
+          "timestampMs": 1771524982160,
+          "address": "/ec2/hello",
+          "args": [
+            "version=1.2",
+            "build=Feb 19 2026 19:14:34",
+            "pid=49660",
+            "osc=127.0.0.1:16447",
+            "telemetry=127.0.0.1:16448",
+            "sampleRate=48000",
+            "bufferSize=1024",
+            "channelsOut=2",
+            "telemetryIntervalMs=50",
+            "autostartAudio=1",
+            "noAudio=1",
+            "startupTransport=0",
+            "dataDir=C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+            "samplesDir=C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          ]
+        },
+        "helloArgsMap": {
+          "version": "1.2",
+          "build": "Feb 19 2026 19:14:34",
+          "pid": "49660",
+          "osc": "127.0.0.1:16447",
+          "telemetry": "127.0.0.1:16448",
+          "sampleRate": "48000",
+          "bufferSize": "1024",
+          "channelsOut": "2",
+          "telemetryIntervalMs": "50",
+          "autostartAudio": "1",
+          "noAudio": "1",
+          "startupTransport": "0",
+          "dataDir": "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+          "samplesDir": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+        },
+        "startupWindow": {
+          "startedAtMs": 1771524982228,
+          "completedAtMs": 1771524984031,
+          "scans": [
+            {
+              "source": "electron",
+              "timestampMs": 1771524982283,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982343,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982404,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982465,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982527,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982588,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982649,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982710,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982771,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982832,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982894,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524982955,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983017,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983077,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983139,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983200,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983261,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983322,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983383,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983444,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983506,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983566,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983627,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983688,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983750,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983811,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983872,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983933,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524983994,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            }
+          ],
+          "stats": {
+            "count": 29,
+            "elapsedMs": 1711,
+            "cadenceHz": 16.94915254237288,
+            "playheadSpan": 0,
+            "scanHeadSpan": 0,
+            "scanRangeSpan": 0,
+            "activeGrainMax": 0
+          }
+        },
+        "transportOnAction": {
+          "ok": true,
+          "state": "on",
+          "snapshot": {
+            "timestampMs": 1771524984032,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine running (PID 49660)",
+            "engineFeedbackText": "Engine start command accepted (starting).",
+            "audioBridgeFeedbackText": "Audio engine OFF.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:16:18] STARTUP: engine_start_requested",
+              "[19:16:18] STARTUP: engine_running pid=45292",
+              "[19:16:20] STARTUP: engine_start_requested",
+              "[19:16:20] STARTUP: engine_running pid=49228",
+              "[19:16:22] STARTUP: engine_start_requested",
+              "[19:16:22] STARTUP: engine_running pid=49660"
+            ]
+          }
+        },
+        "postTransportWindow": {
+          "startedAtMs": 1771524984053,
+          "completedAtMs": 1771524985857,
+          "scans": [
+            {
+              "source": "electron",
+              "timestampMs": 1771524984114,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984175,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984236,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984297,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984358,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984419,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984481,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984542,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984603,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984664,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984725,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984787,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984847,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984909,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524984970,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985032,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985094,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985155,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985216,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985277,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985338,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985399,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985460,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985521,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985582,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985643,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985705,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985766,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            },
+            {
+              "source": "electron",
+              "timestampMs": 1771524985827,
+              "playheadNorm": 0,
+              "scanHeadNorm": 0,
+              "scanRangeNorm": 0.25,
+              "soundFileFrames": 480000,
+              "activeGrainCount": 0,
+              "activeGrainIndices": [],
+              "activeGrainNormPositions": []
+            }
+          ],
+          "stats": {
+            "count": 29,
+            "elapsedMs": 1713,
+            "cadenceHz": 16.929363689433742,
+            "playheadSpan": 0,
+            "scanHeadSpan": 0,
+            "scanRangeSpan": 0,
+            "activeGrainMax": 0
+          }
+        },
+        "logs": [
+          {
+            "timestampMs": 1771524982148,
+            "source": "system",
+            "line": "Engine started (pid=49660) using C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe"
+          },
+          {
+            "timestampMs": 1771524982159,
+            "source": "stdout",
+            "line": "[ec2_headless] --no-audio overrides --autostart-audio"
+          },
+          {
+            "timestampMs": 1771524982159,
+            "source": "stdout",
+            "line": "[ec2_headless] version 1.2"
+          },
+          {
+            "timestampMs": 1771524982159,
+            "source": "stdout",
+            "line": "[ec2_headless] pid 49660"
+          },
+          {
+            "timestampMs": 1771524982159,
+            "source": "stdout",
+            "line": "[ec2_headless] osc 127.0.0.1:16447"
+          },
+          {
+            "timestampMs": 1771524982159,
+            "source": "stdout",
+            "line": "[ec2_headless] telemetry 127.0.0.1:16448"
+          },
+          {
+            "timestampMs": 1771524982159,
+            "source": "stdout",
+            "line": "[ec2_headless] telemetryIntervalMs 50"
+          },
+          {
+            "timestampMs": 1771524982159,
+            "source": "stdout",
+            "line": "[ec2_headless] dataDir C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2"
+          },
+          {
+            "timestampMs": 1771524982159,
+            "source": "stdout",
+            "line": "[ec2_headless] samplesDir C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples"
+          },
+          {
+            "timestampMs": 1771524982159,
+            "source": "stdout",
+            "line": "[ec2_headless] autostartAudio 1"
+          },
+          {
+            "timestampMs": 1771524982159,
+            "source": "stdout",
+            "line": "[ec2_headless] noAudio 1"
+          },
+          {
+            "timestampMs": 1771524982160,
+            "source": "stdout",
+            "line": "[ec2_headless] sent /ec2/hello to 127.0.0.1:16448"
+          },
+          {
+            "timestampMs": 1771524982160,
+            "source": "stdout",
+            "line": "[ec2_headless] sending /ec2/telemetry/scan every 50ms"
+          },
+          {
+            "timestampMs": 1771524982160,
+            "source": "stdout",
+            "line": "[ec2_headless] audio disabled by --no-audio"
+          },
+          {
+            "timestampMs": 1771524984032,
+            "source": "stdout",
+            "line": "[ec2_headless] ignored /transport 1 because --no-audio is active"
+          }
+        ],
+        "stopResult": {
+          "command": "stop",
+          "expectedStatus": "stopped",
+          "ok": true,
+          "startedAt": "2026-02-19T18:16:25.857Z",
+          "completedAt": "2026-02-19T18:16:25.923Z",
+          "statusAfter": {
+            "ok": true,
+            "status": "stopped",
+            "pid": null,
+            "binaryPath": "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\ecSource\\bin\\ec2_headless.exe",
+            "args": [
+              "--osc-host",
+              "127.0.0.1",
+              "--osc-port",
+              "16447",
+              "--telemetry-host",
+              "127.0.0.1",
+              "--telemetry-port",
+              "16448",
+              "--data-dir",
+              "C:\\Users\\Milan\\AppData\\Roaming\\Electron\\ec2",
+              "--samples-dir",
+              "C:\\Users\\Milan\\Documents\\GranuPose\\EmissionControl2\\externalResources\\samples",
+              "--autostart-audio",
+              "--no-audio"
+            ],
+            "startedAtMs": 1771524982149,
+            "stoppedAtMs": 1771524985859,
+            "autoStartEnabled": false
+          },
+          "snapshotAfter": {
+            "timestampMs": 1771524985923,
+            "protocolValue": "osc",
+            "managedChecked": true,
+            "startupAutoTransportChecked": false,
+            "hostValue": "127.0.0.1",
+            "hostDisabled": true,
+            "portValue": "16447",
+            "portDisabled": true,
+            "modeNote": "Managed mode lock active: OSC target fixed to 127.0.0.1:16447.",
+            "startupPolicyNote": "Startup transport policy: disabled (no implicit /transport command on startup).",
+            "bridgeMode": "Standalone Local",
+            "engineStatusText": "Engine stopped",
+            "engineFeedbackText": "Engine stop command accepted (stopped).",
+            "audioBridgeFeedbackText": "Audio engine ON.",
+            "recordFileNameValue": "take.wav",
+            "outputFolderValue": "C:\\Users\\Milan\\AppData\\Local\\Temp\\granuPose-step3-validation-1771524882869",
+            "startupAuditTrail": [
+              "[19:16:18] STARTUP: engine_start_requested",
+              "[19:16:18] STARTUP: engine_running pid=45292",
+              "[19:16:20] STARTUP: engine_start_requested",
+              "[19:16:20] STARTUP: engine_running pid=49228",
+              "[19:16:22] STARTUP: engine_start_requested",
+              "[19:16:22] STARTUP: engine_running pid=49660"
+            ]
+          }
+        }
+      }
+    },
+    "errors": []
+  },
+  "pass": true,
+  "completedAt": "2026-02-19T18:16:25.924Z"
+}

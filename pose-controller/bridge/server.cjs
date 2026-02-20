@@ -10,9 +10,13 @@ const DEFAULTS = {
   allowedOrigin: '*',
   oscTargetHost: '127.0.0.1',
   oscTargetPort: 16447,
+  telemetryListenHost: '0.0.0.0',
+  telemetryListenPort: 16448,
+  telemetryScanAddress: '/ec2/telemetry/scan',
   oscChannelPrefix: '/pose/out',
   channelCount: 16,
   maxMessagesPerSecond: 60,
+  oscActivityLogIntervalMs: 1000,
 };
 
 function parseNumber(rawValue, fallback) {
@@ -30,11 +34,25 @@ const config = {
   allowedOrigin: process.env.ALLOWED_ORIGIN || DEFAULTS.allowedOrigin,
   oscTargetHost: process.env.OSC_TARGET_HOST || DEFAULTS.oscTargetHost,
   oscTargetPort: parseNumber(process.env.OSC_TARGET_PORT, DEFAULTS.oscTargetPort),
+  telemetryListenHost: process.env.TELEMETRY_LISTEN_HOST || DEFAULTS.telemetryListenHost,
+  telemetryListenPort: parseNumber(
+    process.env.TELEMETRY_LISTEN_PORT,
+    DEFAULTS.telemetryListenPort,
+  ),
+  telemetryScanAddress:
+    process.env.TELEMETRY_SCAN_ADDRESS || DEFAULTS.telemetryScanAddress,
   oscChannelPrefix: normalizePrefix(process.env.OSC_CHANNEL_PREFIX),
   channelCount: parseNumber(process.env.CHANNEL_COUNT, DEFAULTS.channelCount),
   maxMessagesPerSecond: parseNumber(
     process.env.MAX_MESSAGES_PER_SECOND,
     DEFAULTS.maxMessagesPerSecond,
+  ),
+  oscActivityLogIntervalMs: Math.max(
+    0,
+    parseNumber(
+      process.env.OSC_ACTIVITY_LOG_INTERVAL_MS,
+      DEFAULTS.oscActivityLogIntervalMs,
+    ),
   ),
 };
 
@@ -86,6 +104,8 @@ const stats = {
   startedAtMs: Date.now(),
   activeWsClients: 0,
   oscSentCount: 0,
+  telemetryReceivedCount: 0,
+  telemetryBroadcastCount: 0,
   droppedRateLimitedCount: 0,
   rejectedValidationCount: 0,
   oscErrorCount: 0,
@@ -95,16 +115,21 @@ const minIntervalMs =
   config.maxMessagesPerSecond > 0 ? Math.floor(1000 / config.maxMessagesPerSecond) : 0;
 const lastSentByKey = new Map();
 let oscReady = false;
+let telemetryReady = false;
+let activityLogInterval = null;
 
 function createHealthPayload() {
   return {
     status: 'ok',
     bridgeReady: true,
     oscReady,
+    telemetryReady,
     activeWsClients: stats.activeWsClients,
     uptimeSeconds: Math.floor((Date.now() - stats.startedAtMs) / 1000),
     counters: {
       oscSentCount: stats.oscSentCount,
+      telemetryReceivedCount: stats.telemetryReceivedCount,
+      telemetryBroadcastCount: stats.telemetryBroadcastCount,
       droppedRateLimitedCount: stats.droppedRateLimitedCount,
       rejectedValidationCount: stats.rejectedValidationCount,
       oscErrorCount: stats.oscErrorCount,
@@ -114,11 +139,89 @@ function createHealthPayload() {
       bridgePort: config.bridgePort,
       oscTargetHost: config.oscTargetHost,
       oscTargetPort: config.oscTargetPort,
+      telemetryListenHost: config.telemetryListenHost,
+      telemetryListenPort: config.telemetryListenPort,
+      telemetryScanAddress: config.telemetryScanAddress,
       channelCount: config.channelCount,
       oscChannelPrefix: config.oscChannelPrefix,
       maxMessagesPerSecond: config.maxMessagesPerSecond,
+      oscActivityLogIntervalMs: config.oscActivityLogIntervalMs,
       allowedOrigin: config.allowedOrigin,
     },
+  };
+}
+
+function clamp01(value) {
+  return Math.max(0, Math.min(1, value));
+}
+
+function parseFiniteNumber(value) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function parseOscNumericArg(rawArg) {
+  if (
+    rawArg &&
+    typeof rawArg === 'object' &&
+    Object.prototype.hasOwnProperty.call(rawArg, 'value')
+  ) {
+    return parseFiniteNumber(rawArg.value);
+  }
+  return parseFiniteNumber(rawArg);
+}
+
+function parseScanTelemetryMessage(message) {
+  if (!message || typeof message.address !== 'string') {
+    return null;
+  }
+
+  if (message.address !== config.telemetryScanAddress) {
+    return null;
+  }
+
+  const args = Array.isArray(message.args) ? message.args : [];
+  if (args.length < 3) {
+    return null;
+  }
+
+  const playheadNorm = parseOscNumericArg(args[0]);
+  const scanHeadNorm = parseOscNumericArg(args[1]);
+  const scanRangeNorm = parseOscNumericArg(args[2]);
+  if (playheadNorm == null || scanHeadNorm == null || scanRangeNorm == null) {
+    return null;
+  }
+
+  const soundFileFramesRaw = args.length >= 4 ? parseOscNumericArg(args[3]) : null;
+  const soundFileFrames =
+    soundFileFramesRaw != null && soundFileFramesRaw > 1
+      ? Math.trunc(soundFileFramesRaw)
+      : null;
+  const activeGrainIndices = [];
+  for (let index = 4; index < args.length && activeGrainIndices.length < 2048; index += 1) {
+    const value = parseOscNumericArg(args[index]);
+    if (value == null) {
+      continue;
+    }
+    activeGrainIndices.push(Math.max(0, Math.trunc(value)));
+  }
+
+  const activeGrainNormPositions = activeGrainIndices.map((grainIndex) =>
+    soundFileFrames && soundFileFrames > 1
+      ? clamp01(grainIndex / soundFileFrames)
+      : clamp01(grainIndex),
+  );
+
+  return {
+    source: 'bridge',
+    timestampMs: Date.now(),
+    playheadNorm: clamp01(playheadNorm),
+    scanHeadNorm: clamp01(scanHeadNorm),
+    scanRangeNorm: clamp01(scanRangeNorm),
+    soundFileFrames,
+    activeGrainCount: activeGrainIndices.length,
+    activeGrainIndices,
+    activeGrainNormPositions,
   };
 }
 
@@ -213,6 +316,51 @@ function sendChannel(channel, value) {
   };
 }
 
+function startActivityLogLoop() {
+  if (config.oscActivityLogIntervalMs <= 0) {
+    return;
+  }
+
+  const intervalLabel =
+    config.oscActivityLogIntervalMs % 1000 === 0
+      ? `${config.oscActivityLogIntervalMs / 1000}s`
+      : `${config.oscActivityLogIntervalMs}ms`;
+
+  let lastOscSentCount = stats.oscSentCount;
+  let lastTelemetryReceivedCount = stats.telemetryReceivedCount;
+  let lastRateLimitedCount = stats.droppedRateLimitedCount;
+  let lastOscErrorCount = stats.oscErrorCount;
+
+  activityLogInterval = setInterval(() => {
+    const oscSentDelta = stats.oscSentCount - lastOscSentCount;
+    const telemetryReceivedDelta = stats.telemetryReceivedCount - lastTelemetryReceivedCount;
+    const rateLimitedDelta = stats.droppedRateLimitedCount - lastRateLimitedCount;
+    const oscErrorDelta = stats.oscErrorCount - lastOscErrorCount;
+
+    lastOscSentCount = stats.oscSentCount;
+    lastTelemetryReceivedCount = stats.telemetryReceivedCount;
+    lastRateLimitedCount = stats.droppedRateLimitedCount;
+    lastOscErrorCount = stats.oscErrorCount;
+
+    if (
+      oscSentDelta <= 0 &&
+      telemetryReceivedDelta <= 0 &&
+      rateLimitedDelta <= 0 &&
+      oscErrorDelta <= 0
+    ) {
+      return;
+    }
+
+    console.log(
+      `[bridge] Activity ${intervalLabel}: oscSent=${oscSentDelta} telemetryRx=${telemetryReceivedDelta} rateLimited=${rateLimitedDelta} errors=${oscErrorDelta} target=${config.oscTargetHost}:${config.oscTargetPort} telemetry=${config.telemetryListenHost}:${config.telemetryListenPort}`,
+    );
+  }, config.oscActivityLogIntervalMs);
+
+  if (typeof activityLogInterval.unref === 'function') {
+    activityLogInterval.unref();
+  }
+}
+
 function createValidationErrorResponse(validationError) {
   stats.rejectedValidationCount += 1;
   return {
@@ -258,9 +406,13 @@ app.get('/config', (_request, response) => {
     bridgePort: config.bridgePort,
     oscTargetHost: config.oscTargetHost,
     oscTargetPort: config.oscTargetPort,
+    telemetryListenHost: config.telemetryListenHost,
+    telemetryListenPort: config.telemetryListenPort,
+    telemetryScanAddress: config.telemetryScanAddress,
     oscChannelPrefix: config.oscChannelPrefix,
     channelCount: config.channelCount,
     maxMessagesPerSecond: config.maxMessagesPerSecond,
+    oscActivityLogIntervalMs: config.oscActivityLogIntervalMs,
     allowedOrigin: config.allowedOrigin,
   });
 });
@@ -358,6 +510,18 @@ const wss = new WebSocketServer({
   path: '/ws',
 });
 
+function broadcastTelemetryScan(payload) {
+  const envelope = {
+    type: 'telemetry:scan',
+    payload,
+  };
+
+  wss.clients.forEach((client) => {
+    sendWsJson(client, envelope);
+    stats.telemetryBroadcastCount += 1;
+  });
+}
+
 function sendWsJson(socket, payload) {
   if (socket.readyState !== socket.OPEN) {
     return;
@@ -372,9 +536,11 @@ wss.on('connection', (socket) => {
     type: 'bridge:hello',
     payload: {
       oscReady,
+      telemetryReady,
       bridgePort: config.bridgePort,
       oscTargetHost: config.oscTargetHost,
       oscTargetPort: config.oscTargetPort,
+      telemetryListenPort: config.telemetryListenPort,
       channelCount: config.channelCount,
     },
   });
@@ -486,13 +652,55 @@ wss.on('connection', (socket) => {
   });
 });
 
+const telemetryUdpPort = new osc.UDPPort({
+  localAddress: config.telemetryListenHost,
+  localPort: config.telemetryListenPort,
+  metadata: true,
+});
+
+telemetryUdpPort.on('ready', () => {
+  telemetryReady = true;
+  console.log(
+    `[bridge] Telemetry OSC ready: listening on ${config.telemetryListenHost}:${config.telemetryListenPort}`,
+  );
+});
+
+telemetryUdpPort.on('message', (message) => {
+  const payload = parseScanTelemetryMessage(message);
+  if (!payload) {
+    return;
+  }
+
+  stats.telemetryReceivedCount += 1;
+  broadcastTelemetryScan(payload);
+});
+
+telemetryUdpPort.on('error', (error) => {
+  telemetryReady = false;
+  stats.oscErrorCount += 1;
+  console.error('[bridge] Telemetry OSC error:', error);
+});
+
+telemetryUdpPort.open();
+startActivityLogLoop();
+
 function shutdown(signal) {
   console.log(`[bridge] Received ${signal}, shutting down...`);
+
+  if (activityLogInterval) {
+    clearInterval(activityLogInterval);
+    activityLogInterval = null;
+  }
 
   wss.close(() => {
     server.close(() => {
       try {
         udpPort.close();
+      } catch {
+        // ignore close errors
+      }
+      try {
+        telemetryUdpPort.close();
       } catch {
         // ignore close errors
       }

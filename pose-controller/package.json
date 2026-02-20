@@ -7,19 +7,97 @@
   "scripts": {
     "dev": "concurrently -k \"npm:dev:renderer\" \"npm:dev:electron\"",
     "dev:renderer": "vite",
-    "dev:electron": "wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron electron/main.cjs",
+    "dev:electron": "wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 node scripts/run-electron.cjs electron/main.cjs",
     "dev:bridge": "node bridge/server.cjs",
     "dev:hosted": "concurrently -k \"vite --host 0.0.0.0 --port 5173\" \"node bridge/server.cjs\"",
     "bridge:start": "node bridge/server.cjs",
     "build": "npm run build:frontend",
     "build:frontend": "tsc -b && vite build",
+    "validate:step1": "concurrently --kill-others --success first \"npm:dev:renderer\" \"npm:validate:step1:electron\"",
+    "validate:step1:electron": "wait-on tcp:5173 && cross-env GRANUPOSE_VALIDATION_MODE=step1 GRANUPOSE_ENGINE_AUTOSTART=0 VITE_DEV_SERVER_URL=http://localhost:5173 GRANUPOSE_VALIDATION_REPORT_PATH=docs/standalone-step1-validation-latest.json node scripts/run-electron.cjs electron/main.cjs",
+    "validate:step2": "concurrently --kill-others --success first \"npm:dev:renderer\" \"npm:validate:step2:electron\"",
+    "validate:step2:electron": "wait-on tcp:5173 && cross-env GRANUPOSE_VALIDATION_MODE=step2 GRANUPOSE_ENGINE_AUTOSTART=0 VITE_DEV_SERVER_URL=http://localhost:5173 GRANUPOSE_VALIDATION_REPORT_PATH=docs/standalone-step2-validation-latest.json node scripts/run-electron.cjs electron/main.cjs",
+    "validate:step3": "concurrently --kill-others --success first \"npm:dev:renderer\" \"npm:validate:step3:electron\"",
+    "validate:step3:electron": "wait-on tcp:5173 && cross-env GRANUPOSE_VALIDATION_MODE=step3 GRANUPOSE_ENGINE_AUTOSTART=0 VITE_DEV_SERVER_URL=http://localhost:5173 GRANUPOSE_VALIDATION_REPORT_PATH=docs/standalone-step3-validation-latest.json node scripts/run-electron.cjs electron/main.cjs",
+    "validate:step4": "concurrently --kill-others --success first \"npm:dev:renderer\" \"npm:validate:step4:electron\"",
+    "validate:step4:electron": "wait-on tcp:5173 && cross-env GRANUPOSE_VALIDATION_MODE=step4 GRANUPOSE_ENGINE_AUTOSTART=0 VITE_DEV_SERVER_URL=http://localhost:5173 GRANUPOSE_VALIDATION_REPORT_PATH=docs/standalone-step4-validation-latest.json node scripts/run-electron.cjs electron/main.cjs",
+    "validate:headless-smoke": "node scripts/headless-smoke-test.cjs",
+    "validate:b2-matrix": "node scripts/b2-matrix-evidence.cjs",
+    "validate:packaged-clean-smoke": "node scripts/packaged-clean-smoke.cjs",
     "preview": "vite preview",
+    "build:engine:stage": "node scripts/build-stage-engine.cjs",
+    "compliance:stage": "node scripts/stage-compliance.cjs",
+    "build:standalone": "npm run build:frontend && npm run build:engine:stage && npm run compliance:stage",
+    "dist": "npm run build:standalone && electron-builder --publish never",
+    "dist:dir": "npm run build:standalone && electron-builder --dir",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "docker:up": "docker compose --profile prod up --build",
-    "docker:up:dev": "docker compose --profile dev up --build",
+    "docker:up": "powershell -ExecutionPolicy Bypass -File ./scripts/docker-up-with-osc-monitor.ps1 -Profile prod",
+    "docker:up:dev": "powershell -ExecutionPolicy Bypass -File ./scripts/docker-up-with-osc-monitor.ps1 -Profile dev",
+    "docker:up:no-monitor": "docker compose --profile prod up --build",
+    "docker:up:dev:no-monitor": "docker compose --profile dev up --build",
     "docker:down": "docker compose down"
+  },
+  "build": {
+    "appId": "com.granupose.standalone",
+    "productName": "GranuPose",
+    "asar": true,
+    "npmRebuild": false,
+    "directories": {
+      "output": "release-artifacts"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "bridge/**/*",
+      "scripts/run-electron.cjs",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "engine-bin",
+        "to": "engine-bin"
+      },
+      {
+        "from": "engine-resources/samples",
+        "to": "ec2/samples"
+      },
+      {
+        "from": "engine-resources/libs",
+        "to": "ec2/libs"
+      },
+      {
+        "from": "release-compliance",
+        "to": "compliance"
+      }
+    ],
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "../EmissionControl2/externalResources/windows/EmissionControl2.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "../EmissionControl2/externalResources/icon/EmissionControl2.icns",
+      "category": "public.app-category.music"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "../EmissionControl2/externalResources/icon"
+    }
   },
   "keywords": [
     "electron",
@@ -56,6 +134,7 @@
     "concurrently": "^9.2.1",
     "cross-env": "^10.1.0",
     "electron": "^40.4.1",
+    "electron-builder": "^25.1.8",
     "eslint": "^9.39.2",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.0",
