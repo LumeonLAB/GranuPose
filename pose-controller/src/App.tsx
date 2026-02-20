@@ -129,7 +129,7 @@ const DEFAULT_OUTPUT_SETTINGS: OutputSettings = {
   ec2Version: DEFAULT_EC2_VERSION,
   ec2ProfileId: DEFAULT_EC2_PROFILE_ID,
   managedLocalEngine: true,
-  managedStartupTransportAutostart: false,
+  managedStartupTransportAutostart: true,
 };
 
 interface AudioBridgeSettings {

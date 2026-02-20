@@ -34,9 +34,8 @@ const ENGINE_DEFAULTS = {
   telemetryHost: process.env.GRANUPOSE_ENGINE_TELEMETRY_HOST || '127.0.0.1',
   telemetryPort: parsePort(process.env.GRANUPOSE_ENGINE_TELEMETRY_PORT, 16448),
   autoStart:
-    parseBooleanEnv(process.env.GRANUPOSE_ENGINE_AUTOSTART) ??
-    (isDev ? false : true),
-  autoStartAudio: parseBooleanEnv(process.env.GRANUPOSE_ENGINE_AUTOSTART_AUDIO) ?? false,
+    parseBooleanEnv(process.env.GRANUPOSE_ENGINE_AUTOSTART) ?? true,
+  autoStartAudio: parseBooleanEnv(process.env.GRANUPOSE_ENGINE_AUTOSTART_AUDIO) ?? true,
   noAudio: parseBooleanEnv(process.env.GRANUPOSE_ENGINE_NO_AUDIO) ?? false,
 };
 
